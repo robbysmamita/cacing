@@ -51,7 +51,7 @@
     <!-- Template Base Styles End -->
 
     <link rel="stylesheet" href="<?= base_url('assets/') ?>css/main.css" />
-    <script src="<?= base_url('assets/') ?><?= base_url('assets/') ?>js/base/loader.js"></script>
+    <script src="<?= base_url('assets/') ?>js/base/loader.js"></script>
 </head>
 
 <body>

@@ -1,1218 +1,198 @@
 <main>
     <div class="container">
-        <!-- Title and Top Buttons Start -->
         <div class="page-title-container">
-            <div class="row">
-                <!-- Title Start -->
-                <div class="col-12 col-sm-6">
-                    <h1 class="mb-0 pb-0 display-4" id="title">Default Dashboard</h1>
-                    <nav class="breadcrumb-container d-inline-block" aria-label="breadcrumb">
-                        <ul class="breadcrumb pt-0">
-                            <li class="breadcrumb-item"><a href="Dashboards.Default.html">Home</a></li>
-                            <li class="breadcrumb-item"><a href="Dashboards.html">Dashboards</a></li>
-                        </ul>
-                    </nav>
-                </div>
-                <!-- Title End -->
-
-                <!-- Top Buttons Start -->
-                <div class="col-12 col-sm-6 d-flex align-items-start justify-content-end">
-                    <!-- Tour Button Start -->
-                    <button type="button" class="btn btn-outline-primary btn-icon btn-icon-end w-100 w-sm-auto" id="dashboardTourButton">
-                        <span>Take a Tour</span>
-                        <i data-cs-icon="flag"></i>
-                    </button>
-                    <!-- Tour Button End -->
-                </div>
-                <!-- Top Buttons End -->
-            </div>
-        </div>
-        <!-- Title and Top Buttons End -->
-
-        <div class="row">
-            <div class="col-12 col-xl-6">
-                <!-- Sales & Stocks Charts Start -->
-                <div class="mb-5" data-title="Fancy Charts" data-intro="Some charts over here!" data-step="1">
-                    <h2 class="small-title">Sales & Stocks</h2>
-                    <div class="card mb-2 h-auto sh-xl-24">
-                        <div class="card-body">
-                            <div class="row g-0 h-100 chart-container">
-                                <!-- Contents for below are provided from js -->
-                                <div class="col-12 col-sm-auto d-flex flex-column justify-content-between custom-tooltip pe-0 pe-sm-4">
-                                    <p class="heading title mb-1"></p>
-                                    <div>
-                                        <div>
-                                            <div class="cta-2 text-primary value d-inline-block align-middle sw-4"></div>
-                                            <i class="icon d-inline-block align-middle text-primary" data-cs-size="15"></i>
-                                        </div>
-                                        <div class="text-small text-muted mb-1 text"></div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-auto">
-                                            <div class="cta-3 text-alternate">84</div>
-                                            <div class="text-small text-muted mb-1">THIS WEEK</div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="cta-3 text-alternate">792</div>
-                                            <div class="text-small text-muted mb-1">THIS MONTH</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-sm sh-17">
-                                    <canvas id="largeLineChart1"></canvas>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card h-auto sh-xl-24">
-                        <div class="card-body">
-                            <div class="row g-0 h-100 chart-container">
-                                <!-- Contents for below are provided from js -->
-                                <div class="col-12 col-sm-auto d-flex flex-column justify-content-between custom-tooltip pe-0 pe-sm-4">
-                                    <p class="heading title"></p>
-                                    <div>
-                                        <div>
-                                            <div class="cta-2 text-primary value d-inline-block align-middle sw-4"></div>
-                                            <i class="icon d-inline-block align-middle text-primary" data-cs-size="15"></i>
-                                        </div>
-                                        <div class="text-small text-muted mb-1 text"></div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-auto">
-                                            <div class="cta-3 text-alternate">84</div>
-                                            <div class="text-small text-muted mb-1">THIS WEEK</div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="cta-3 text-alternate">792</div>
-                                            <div class="text-small text-muted mb-1">THIS MONTH</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-sm sh-17">
-                                    <canvas id="largeLineChart2"></canvas>
-                                </div>
-                            </div>
-                        </div>
+            <div class="row g-0">
+                <div class="col-auto mb-2 mb-md-0 me-auto">
+                    <div class="w-auto sw-md-25">
+                        <h1 class="mb-0 pb-0 display-4" id="title">Tasks</h1>
+                        <nav class="breadcrumb-container d-inline-block" aria-label="breadcrumb">
+                            <ul class="breadcrumb pt-0">
+                                <li class="breadcrumb-item">
+                                    <a href="Dashboards.Default.html">Home</a>
+                                </li>
+                                <li class="breadcrumb-item">
+                                    <a href="Apps.html">Apps</a>
+                                </li>
+                            </ul>
+                        </nav>
                     </div>
                 </div>
-                <!-- Sales & Stocks Charts End -->
-
-                <!-- Stats Start -->
-                <h2 class="small-title">Stats</h2>
-                <div class="row gx-2">
-                    <div class="col-12 p-0">
-                        <div class="glide glide-small" id="statsCarousel">
-                            <div class="glide__track" data-glide-el="track">
-                                <div class="glide__slides">
-                                    <div class="glide__slide">
-                                        <div class="card mb-5 sh-20 hover-border-primary">
-                                            <div class="h-100 p-4 text-center align-items-center d-flex flex-column justify-content-between">
-                                                <div class="d-flex flex-column justify-content-center align-items-center sh-5 sw-5 rounded-xl bg-gradient-primary mb-2">
-                                                    <i data-cs-icon="alarm" class="text-white"></i>
-                                                </div>
-                                                <p class="mb-0 lh-1">Pending Orders</p>
-                                                <p class="cta-3 mb-0 text-primary">25</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="glide__slide">
-                                        <div class="card mb-5 sh-20 hover-border-primary">
-                                            <div class="h-100 p-4 text-center align-items-center d-flex flex-column justify-content-between">
-                                                <div class="d-flex flex-column justify-content-center align-items-center sh-5 sw-5 rounded-xl bg-gradient-primary mb-2">
-                                                    <i data-cs-icon="navigate-diagonal" class="text-white"></i>
-                                                </div>
-                                                <p class="mb-0 lh-1">Shipped Orders</p>
-                                                <p class="cta-3 mb-0 text-primary">48</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="glide__slide">
-                                        <div class="card mb-5 sh-20 hover-border-primary">
-                                            <div class="h-100 p-4 text-center align-items-center d-flex flex-column justify-content-between">
-                                                <div class="d-flex flex-column justify-content-center align-items-center sh-5 sw-5 rounded-xl bg-gradient-primary mb-2">
-                                                    <i data-cs-icon="check-circle" class="text-white"></i>
-                                                </div>
-                                                <p class="mb-0 lh-1">Delivered Orders</p>
-                                                <p class="cta-3 mb-0 text-primary">53</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="glide__slide">
-                                        <div class="card mb-5 sh-20 hover-border-primary">
-                                            <div class="h-100 p-4 text-center align-items-center d-flex flex-column justify-content-between">
-                                                <div class="d-flex flex-column justify-content-center align-items-center sh-5 sw-5 rounded-xl bg-gradient-primary mb-2">
-                                                    <i data-cs-icon="arrow-bottom-left" class="text-white"></i>
-                                                </div>
-                                                <p class="mb-0 lh-1">Returned Orders</p>
-                                                <p class="cta-3 mb-0 text-primary">4</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="glide__slide">
-                                        <div class="card mb-5 sh-20 hover-border-primary">
-                                            <div class="h-100 p-4 text-center align-items-center d-flex flex-column justify-content-between">
-                                                <div class="d-flex flex-column justify-content-center align-items-center sh-5 sw-5 rounded-xl bg-gradient-primary mb-2">
-                                                    <i data-cs-icon="warning-hexagon" class="text-white"></i>
-                                                </div>
-                                                <p class="mb-0 lh-1">Unconfirmed Orders</p>
-                                                <p class="cta-3 mb-0 text-primary">3</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="glide__slide">
-                                        <div class="card mb-5 sh-20 hover-border-primary">
-                                            <div class="h-100 p-4 text-center align-items-center d-flex flex-column justify-content-between">
-                                                <div class="d-flex flex-column justify-content-center align-items-center sh-5 sw-5 rounded-xl bg-gradient-primary mb-2">
-                                                    <i data-cs-icon="pin-error" class="text-white"></i>
-                                                </div>
-                                                <p class="mb-0 lh-1">Missing Orders</p>
-                                                <p class="cta-3 mb-0 text-primary">2</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Stats Start -->
-            </div>
-
-            <!-- Products Start -->
-            <div class="col-12 col-xl-6 mb-5">
-                <div class="d-flex justify-content-between">
-                    <h2 class="small-title">Products</h2>
-                    <button class="btn btn-icon btn-icon-only btn-sm btn-background-alternate mt-n2 shadow" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
-                        <i data-cs-icon="more-horizontal" data-cs-size="15"></i>
-                    </button>
-                    <div class="dropdown-menu dropdown-menu-sm dropdown-menu-end shadow">
-                        <a class="dropdown-item" href="#">Reload</a>
-                        <a class="dropdown-item" href="#">Stats</a>
-                        <a class="dropdown-item" href="#">Details</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Delete</a>
-                    </div>
-                </div>
-
-                <div class="scroll-out">
-                    <div class="scroll-by-count" data-count="6">
-                        <div class="card mb-2" data-title="Product Card" data-intro="Here is a product card with buttons!" data-step="2">
-                            <div class="row g-0 sh-12">
-                                <div class="col-auto">
-                                    <a href="Pages.Portfolio.Detail.html">
-                                        <img src="img/product/small/steirer-brot.jpg" alt="user" class="card-img card-img-horizontal sw-13 sw-lg-15" />
-                                    </a>
-                                </div>
-                                <div class="col">
-                                    <div class="card-body pt-0 pb-0 h-100">
-                                        <div class="row g-0 h-100 align-content-center">
-                                            <div class="col-12 col-md-7 d-flex flex-column mb-2 mb-md-0 position-static">
-                                                <a href="Pages.Portfolio.Detail.html">Kommissbrot</a>
-                                                <div class="text-small text-muted text-truncate">Icing liquorice olegário jujubes oat cake.</div>
-                                            </div>
-                                            <div class="col-12 col-md-5 d-flex align-items-center justify-content-md-end">
-                                                <button class="btn btn-sm btn-icon btn-icon-start btn-outline-primary ms-1" type="button">
-                                                    <i data-cs-icon="edit-square" data-cs-size="15"></i>
-                                                    <span class="d-none d-xxl-inline-block">Edit</span>
-                                                </button>
-                                                <button class="btn btn-sm btn-icon btn-icon-start btn-outline-primary ms-1" type="button">
-                                                    <i data-cs-icon="bin" data-cs-size="15"></i>
-                                                    <span class="d-none d-xxl-inline-block">Delete</span>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card mb-2">
-                            <div class="row g-0 sh-12">
-                                <div class="col-auto position-relative">
-                                    <span class="badge rounded-pill bg-primary me-1 position-absolute e-n3 t-2">TREND</span>
-                                    <a href="Pages.Portfolio.Detail.html">
-                                        <img src="img/product/small/cornbread.jpg" alt="user" class="card-img card-img-horizontal sw-13 sw-lg-15" />
-                                    </a>
-                                </div>
-                                <div class="col">
-                                    <div class="card-body pt-0 pb-0 h-100">
-                                        <div class="row g-0 h-100 align-content-center">
-                                            <div class="col-12 col-md-7 d-flex flex-column mb-2 mb-md-0">
-                                                <a href="Pages.Portfolio.Detail.html">Yeast Karavai</a>
-                                                <div class="text-small text-muted text-truncate">Gummi liquorice olegário jujubes cookie.</div>
-                                            </div>
-                                            <div class="col-12 col-md-5 d-flex align-items-center justify-content-md-end">
-                                                <button class="btn btn-sm btn-icon btn-icon-start btn-outline-primary ms-1" type="button">
-                                                    <i data-cs-icon="edit-square" data-cs-size="15"></i>
-                                                    <span class="d-none d-xxl-inline-block">Edit</span>
-                                                </button>
-                                                <button class="btn btn-sm btn-icon btn-icon-start btn-outline-primary ms-1" type="button">
-                                                    <i data-cs-icon="bin" data-cs-size="15"></i>
-                                                    <span class="d-none d-xxl-inline-block">Delete</span>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card mb-2">
-                            <div class="row g-0 sh-12">
-                                <div class="col-auto">
-                                    <a href="Pages.Portfolio.Detail.html">
-                                        <img src="img/product/small/panettone.jpg" alt="user" class="card-img card-img-horizontal sw-13 sw-lg-15" />
-                                    </a>
-                                </div>
-                                <div class="col">
-                                    <div class="card-body pt-0 pb-0 h-100">
-                                        <div class="row g-0 h-100 align-content-center">
-                                            <div class="col-12 col-md-7 d-flex flex-column mb-2 mb-md-0">
-                                                <a href="Pages.Portfolio.Detail.html">Cholermüs</a>
-                                                <div class="text-small text-muted text-truncate">Marshmallow topping icing liquorice oat cake.</div>
-                                            </div>
-                                            <div class="col-12 col-md-5 d-flex align-items-center justify-content-md-end">
-                                                <button class="btn btn-sm btn-icon btn-icon-start btn-outline-primary ms-1" type="button">
-                                                    <i data-cs-icon="edit-square" data-cs-size="15"></i>
-                                                    <span class="d-none d-xxl-inline-block">Edit</span>
-                                                </button>
-                                                <button class="btn btn-sm btn-icon btn-icon-start btn-outline-primary ms-1" type="button">
-                                                    <i data-cs-icon="bin" data-cs-size="15"></i>
-                                                    <span class="d-none d-xxl-inline-block">Delete</span>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card mb-2">
-                            <div class="row g-0 sh-12">
-                                <div class="col-auto">
-                                    <a href="Pages.Portfolio.Detail.html">
-                                        <img src="img/product/small/michetta.jpg" alt="user" class="card-img card-img-horizontal sw-13 sw-lg-15" />
-                                    </a>
-                                </div>
-                                <div class="col">
-                                    <div class="card-body pt-0 pb-0 h-100">
-                                        <div class="row g-0 h-100 align-content-center">
-                                            <div class="col-12 col-md-7 d-flex flex-column mb-2 mb-md-0">
-                                                <a href="Pages.Portfolio.Detail.html">Cheesymite Scroll</a>
-                                                <div class="text-small text-muted text-truncate">Tootsie brownie ice cream marshmallow topping.</div>
-                                            </div>
-                                            <div class="col-12 col-md-5 d-flex align-items-center justify-content-md-end">
-                                                <button class="btn btn-sm btn-icon btn-icon-start btn-outline-primary ms-1" type="button">
-                                                    <i data-cs-icon="edit-square" data-cs-size="15"></i>
-                                                    <span class="d-none d-xxl-inline-block">Edit</span>
-                                                </button>
-                                                <button class="btn btn-sm btn-icon btn-icon-start btn-outline-primary ms-1" type="button">
-                                                    <i data-cs-icon="bin" data-cs-size="15"></i>
-                                                    <span class="d-none d-xxl-inline-block">Delete</span>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card mb-2">
-                            <div class="row g-0 sh-12">
-                                <div class="col-auto">
-                                    <a href="Pages.Portfolio.Detail.html">
-                                        <img src="img/product/small/barmbrack.jpg" alt="user" class="card-img card-img-horizontal sw-13 sw-lg-15" />
-                                    </a>
-                                </div>
-                                <div class="col">
-                                    <div class="card-body pt-0 pb-0 h-100">
-                                        <div class="row g-0 h-100 align-content-center">
-                                            <div class="col-12 col-md-7 d-flex flex-column mb-2 mb-md-0">
-                                                <a href="Pages.Portfolio.Detail.html">Bazlama</a>
-                                                <div class="text-small text-muted text-truncate">Tootsie roll cream marshmallow chocolate bar.</div>
-                                            </div>
-                                            <div class="col-12 col-md-5 d-flex align-items-center justify-content-md-end">
-                                                <button class="btn btn-sm btn-icon btn-icon-start btn-outline-primary ms-1" type="button">
-                                                    <i data-cs-icon="edit-square" data-cs-size="15"></i>
-                                                    <span class="d-none d-xxl-inline-block">Edit</span>
-                                                </button>
-                                                <button class="btn btn-sm btn-icon btn-icon-start btn-outline-primary ms-1" type="button">
-                                                    <i data-cs-icon="bin" data-cs-size="15"></i>
-                                                    <span class="d-none d-xxl-inline-block">Delete</span>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card mb-2">
-                            <div class="row g-0 sh-12">
-                                <div class="col-auto">
-                                    <a href="Pages.Portfolio.Detail.html">
-                                        <img src="img/product/small/zopf.jpg" alt="user" class="card-img card-img-horizontal sw-13 sw-lg-15" />
-                                    </a>
-                                </div>
-                                <div class="col">
-                                    <div class="card-body pt-0 pb-0 h-100">
-                                        <div class="row g-0 h-100 align-content-center">
-                                            <div class="col-12 col-md-7 d-flex flex-column mb-2 mb-md-0">
-                                                <a href="Pages.Portfolio.Detail.html">Soda Bread</a>
-                                                <div class="text-small text-muted text-truncate">Marshmallow topping icing liquorice oat cake.</div>
-                                            </div>
-                                            <div class="col-12 col-md-5 d-flex align-items-center justify-content-md-end">
-                                                <button class="btn btn-sm btn-icon btn-icon-start btn-outline-primary ms-1" type="button">
-                                                    <i data-cs-icon="edit-square" data-cs-size="15"></i>
-                                                    <span class="d-none d-xxl-inline-block">Edit</span>
-                                                </button>
-                                                <button class="btn btn-sm btn-icon btn-icon-start btn-outline-primary ms-1" type="button">
-                                                    <i data-cs-icon="bin" data-cs-size="15"></i>
-                                                    <span class="d-none d-xxl-inline-block">Delete</span>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card mb-2">
-                            <div class="row g-0 sh-12">
-                                <div class="col-auto">
-                                    <a href="Pages.Portfolio.Detail.html">
-                                        <img src="img/product/small/boule.jpg" alt="user" class="card-img card-img-horizontal sw-13 sw-lg-15" />
-                                    </a>
-                                </div>
-                                <div class="col">
-                                    <div class="card-body pt-0 pb-0 h-100">
-                                        <div class="row g-0 h-100 align-content-center">
-                                            <div class="col-12 col-md-7 d-flex flex-column mb-2 mb-md-0">
-                                                <a href="Pages.Portfolio.Detail.html">Chapati</a>
-                                                <div class="text-small text-muted text-truncate">Tootsie brownie ice cream marshmallow topping.</div>
-                                            </div>
-                                            <div class="col-12 col-md-5 d-flex align-items-center justify-content-md-end">
-                                                <button class="btn btn-sm btn-icon btn-icon-start btn-outline-primary ms-1" type="button">
-                                                    <i data-cs-icon="edit-square" data-cs-size="15"></i>
-                                                    <span class="d-none d-xxl-inline-block">Edit</span>
-                                                </button>
-                                                <button class="btn btn-sm btn-icon btn-icon-start btn-outline-primary ms-1" type="button">
-                                                    <i data-cs-icon="bin" data-cs-size="15"></i>
-                                                    <span class="d-none d-xxl-inline-block">Delete</span>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Products End -->
-        </div>
-
-        <div class="row">
-            <!-- Logs Start -->
-            <div class="col-lg-6 mb-5">
-                <h2 class="small-title">Logs</h2>
-                <div class="card sh-40 h-lg-100-card">
-                    <div class="card-body mb-n2 scroll-out h-100">
-                        <div class="scroll h-100">
-                            <div class="row g-0 mb-2">
-                                <div class="col-auto">
-                                    <div class="sw-3 d-inline-block d-flex justify-content-start align-items-center h-100">
-                                        <div class="sh-3">
-                                            <i data-cs-icon="circle" class="text-primary align-top"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <div class="card-body d-flex flex-column pt-0 pb-0 ps-3 pe-4 h-100 justify-content-center">
-                                        <div class="d-flex flex-column">
-                                            <div class="text-alternate mt-n1 lh-1-25">New user registiration</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-auto">
-                                    <div class="d-inline-block d-flex justify-content-end align-items-center h-100">
-                                        <div class="text-muted ms-2 mt-n1 lh-1-25">18 Dec</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row g-0 mb-2">
-                                <div class="col-auto">
-                                    <div class="sw-3 d-inline-block d-flex justify-content-start align-items-center h-100">
-                                        <div class="sh-3">
-                                            <i data-cs-icon="circle" class="text-primary align-top"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <div class="card-body d-flex flex-column pt-0 pb-0 ps-3 pe-4 h-100 justify-content-center">
-                                        <div class="d-flex flex-column">
-                                            <div class="text-alternate mt-n1 lh-1-25">3 new product added</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-auto">
-                                    <div class="d-inline-block d-flex justify-content-end align-items-center h-100">
-                                        <div class="text-muted ms-2 mt-n1 lh-1-25">18 Dec</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row g-0 mb-2">
-                                <div class="col-auto">
-                                    <div class="sw-3 d-inline-block d-flex justify-content-start align-items-center h-100">
-                                        <div class="sh-3">
-                                            <i data-cs-icon="square" class="text-secondary align-top"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <div class="card-body d-flex flex-column pt-0 pb-0 ps-3 pe-4 h-100 justify-content-center">
-                                        <div class="d-flex flex-column">
-                                            <div class="text-alternate mt-n1 lh-1-25">
-                                                Product out of stock:
-                                                <a href="#" class="alternate-link underline-link">Breadstick</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-auto">
-                                    <div class="d-inline-block d-flex justify-content-end align-items-center h-100">
-                                        <div class="text-muted ms-2 mt-n1 lh-1-25">16 Dec</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row g-0 mb-2">
-                                <div class="col-auto">
-                                    <div class="sw-3 d-inline-block d-flex justify-content-start align-items-center h-100">
-                                        <div class="sh-3">
-                                            <i data-cs-icon="square" class="text-secondary align-top"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <div class="card-body d-flex flex-column pt-0 pb-0 ps-3 pe-4 h-100 justify-content-center">
-                                        <div class="d-flex flex-column">
-                                            <div class="text-alternate mt-n1 lh-1-25">Category page returned an error</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-auto">
-                                    <div class="d-inline-block d-flex justify-content-end align-items-center h-100">
-                                        <div class="text-muted ms-2 mt-n1 lh-1-25">15 Dec</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row g-0 mb-2">
-                                <div class="col-auto">
-                                    <div class="sw-3 d-inline-block d-flex justify-content-start align-items-center h-100">
-                                        <div class="sh-3">
-                                            <i data-cs-icon="circle" class="text-primary align-top"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <div class="card-body d-flex flex-column pt-0 pb-0 ps-3 pe-4 h-100 justify-content-center">
-                                        <div class="d-flex flex-column">
-                                            <div class="text-alternate mt-n1 lh-1-25">14 products added</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-auto">
-                                    <div class="d-inline-block d-flex justify-content-end align-items-center h-100">
-                                        <div class="text-muted ms-2 mt-n1 lh-1-25">15 Dec</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row g-0 mb-2">
-                                <div class="col-auto">
-                                    <div class="sw-3 d-inline-block d-flex justify-content-start align-items-center h-100">
-                                        <div class="sh-3">
-                                            <i data-cs-icon="hexagon" class="text-tertiary align-top"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <div class="card-body d-flex flex-column pt-0 pb-0 ps-3 pe-4 h-100 justify-content-center">
-                                        <div class="d-flex flex-column">
-                                            <div class="text-alternate mt-n1 lh-1-25">
-                                                New sale:
-                                                <a href="#" class="alternate-link underline-link">Steirer Brot</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-auto">
-                                    <div class="d-inline-block d-flex justify-content-end align-items-center h-100">
-                                        <div class="text-muted ms-2 mt-n1 lh-1-25">15 Dec</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row g-0 mb-2">
-                                <div class="col-auto">
-                                    <div class="sw-3 d-inline-block d-flex justify-content-start align-items-center h-100">
-                                        <div class="sh-3">
-                                            <i data-cs-icon="hexagon" class="text-tertiary align-top"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <div class="card-body d-flex flex-column pt-0 pb-0 ps-3 pe-4 h-100 justify-content-center">
-                                        <div class="d-flex flex-column">
-                                            <div class="text-alternate mt-n1 lh-1-25">
-                                                New sale:
-                                                <a href="#" class="alternate-link underline-link">Soda Bread</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-auto">
-                                    <div class="d-inline-block d-flex justify-content-end align-items-center h-100">
-                                        <div class="text-muted ms-2 mt-n1 lh-1-25">15 Dec</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row g-0 mb-2">
-                                <div class="col-auto">
-                                    <div class="sw-3 d-inline-block d-flex justify-content-start align-items-center h-100">
-                                        <div class="sh-3">
-                                            <i data-cs-icon="triangle" class="text-warning align-top"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <div class="card-body d-flex flex-column pt-0 pb-0 ps-3 pe-4 h-100 justify-content-center">
-                                        <div class="d-flex flex-column">
-                                            <div class="text-alternate mt-n1 lh-1-25">Recived a support ticket</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-auto">
-                                    <div class="d-inline-block d-flex justify-content-end align-items-center h-100">
-                                        <div class="text-muted ms-2 mt-n1 lh-1-25">14 Dec</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row g-0 mb-2">
-                                <div class="col-auto">
-                                    <div class="sw-3 d-inline-block d-flex justify-content-start align-items-center h-100">
-                                        <div class="sh-3">
-                                            <i data-cs-icon="hexagon" class="text-tertiary align-top"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <div class="card-body d-flex flex-column pt-0 pb-0 ps-3 pe-4 h-100 justify-content-center">
-                                        <div class="d-flex flex-column">
-                                            <div class="text-alternate mt-n1 lh-1-25">
-                                                New sale:
-                                                <a href="#" class="alternate-link underline-link">Cholermüs</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-auto">
-                                    <div class="d-inline-block d-flex justify-content-end align-items-center h-100">
-                                        <div class="text-muted ms-2 mt-n1 lh-1-25">13 Dec</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row g-0 mb-2">
-                                <div class="col-auto">
-                                    <div class="sw-3 d-inline-block d-flex justify-content-start align-items-center h-100">
-                                        <div class="sh-3">
-                                            <i data-cs-icon="hexagon" class="text-tertiary align-top"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <div class="card-body d-flex flex-column pt-0 pb-0 ps-3 pe-4 h-100 justify-content-center">
-                                        <div class="d-flex flex-column">
-                                            <div class="text-alternate mt-n1 lh-1-25">
-                                                New sale:
-                                                <a href="#" class="alternate-link underline-link">Bazlama</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-auto">
-                                    <div class="d-inline-block d-flex justify-content-end align-items-center h-100">
-                                        <div class="text-muted ms-2 mt-n1 lh-1-25">13 Dec</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row g-0 mb-2">
-                                <div class="col-auto">
-                                    <div class="sw-3 d-inline-block d-flex justify-content-start align-items-center h-100">
-                                        <div class="sh-3">
-                                            <i data-cs-icon="triangle" class="text-warning align-top"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <div class="card-body d-flex flex-column pt-0 pb-0 ps-3 pe-4 h-100 justify-content-center">
-                                        <div class="d-flex flex-column">
-                                            <div class="text-alternate mt-n1 lh-1-25">Recived a comment</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-auto">
-                                    <div class="d-inline-block d-flex justify-content-end align-items-center h-100">
-                                        <div class="text-muted ms-2 mt-n1 lh-1-25">13 Dec</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row g-0 mb-2">
-                                <div class="col-auto">
-                                    <div class="sw-3 d-inline-block d-flex justify-content-start align-items-center h-100">
-                                        <div class="sh-3">
-                                            <i data-cs-icon="triangle" class="text-warning align-top"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <div class="card-body d-flex flex-column pt-0 pb-0 ps-3 pe-4 h-100 justify-content-center">
-                                        <div class="d-flex flex-column">
-                                            <div class="text-alternate mt-n1 lh-1-25">Recived an email</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-auto">
-                                    <div class="d-inline-block d-flex justify-content-end align-items-center h-100">
-                                        <div class="text-muted ms-2 mt-n1 lh-1-25">13 Dec</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row g-0 mb-2">
-                                <div class="col-auto">
-                                    <div class="sw-3 d-inline-block d-flex justify-content-start align-items-center h-100">
-                                        <div class="sh-3">
-                                            <i data-cs-icon="hexagon" class="text-tertiary align-top"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <div class="card-body d-flex flex-column pt-0 pb-0 ps-3 pe-4 h-100 justify-content-center">
-                                        <div class="d-flex flex-column">
-                                            <div class="text-alternate mt-n1 lh-1-25">
-                                                New sale:
-                                                <a href="#" class="alternate-link underline-link">Bazlama</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-auto">
-                                    <div class="d-inline-block d-flex justify-content-end align-items-center h-100">
-                                        <div class="text-muted ms-2 mt-n1 lh-1-25">12 Dec</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row g-0 mb-2">
-                                <div class="col-auto">
-                                    <div class="sw-3 d-inline-block d-flex justify-content-start align-items-center h-100">
-                                        <div class="sh-3">
-                                            <i data-cs-icon="triangle" class="text-warning align-top"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <div class="card-body d-flex flex-column pt-0 pb-0 ps-3 pe-4 h-100 justify-content-center">
-                                        <div class="d-flex flex-column">
-                                            <div class="text-alternate mt-n1 lh-1-25">Recived a comment</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-auto">
-                                    <div class="d-inline-block d-flex justify-content-end align-items-center h-100">
-                                        <div class="text-muted ms-2 mt-n1 lh-1-25">12 Dec</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Logs End -->
-
-            <!-- Categories Start -->
-            <div class="col-lg-6 mb-5">
-                <div class="d-flex justify-content-between">
-                    <h2 class="small-title">Categories</h2>
-                    <button class="btn btn-icon btn-icon-end btn-xs btn-background-alternate p-0 text-small" type="button">
-                        <span class="align-bottom">View All</span>
-                        <i data-cs-icon="chevron-right" class="align-middle" data-cs-size="12"></i>
+                <div class="col-auto d-flex d-lg-none align-items-start mb-2 mb-md-0 order-md-1">
+                    <button type="button" class="btn btn-primary btn-icon btn-icon-only ms-1" id="tasksMenuButton">
+                        <i data-acorn-icon="menu-left"></i>
                     </button>
                 </div>
-                <div class="row g-2">
-                    <div class="col-6 col-xl-4 sh-19" data-title="More Cards" data-intro="Category card with an icon!" data-step="3">
-                        <div class="card h-100 hover-scale-up">
-                            <a class="card-body text-center" href="#">
-                                <i data-cs-icon="cupcake" class="text-primary"></i>
-                                <p class="heading mt-3 text-body">Cupcakes</p>
-                                <div class="text-extra-small fw-medium text-muted">14 PRODUCTS</div>
-                            </a>
-                        </div>
+                <div class="col-12 col-md d-flex align-items-start justify-content-end justify-content-lg-start">
+                    <div class="me-lg-auto w-100 w-md-auto search-input-container border border-separator">
+                        <input class="form-control search" type="text" autocomplete="off" placeholder="Search" id="taskSearch">
+                        <span class="search-magnifier-icon">
+                            <i data-acorn-icon="search"></i>
+                        </span>
                     </div>
-                    <div class="col-6 col-xl-4 sh-19">
-                        <div class="card h-100 hover-scale-up">
-                            <a class="card-body text-center" href="#">
-                                <i data-cs-icon="loaf" class="text-primary"></i>
-                                <p class="heading mt-3 text-body">Breads</p>
-                                <div class="text-extra-small fw-medium text-muted">3 PRODUCTS</div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-6 col-xl-4 sh-19">
-                        <div class="card h-100 hover-scale-up">
-                            <a class="card-body text-center" href="#">
-                                <i data-cs-icon="radish" class="text-primary"></i>
-                                <p class="heading mt-3 text-body">Vegetables</p>
-                                <div class="text-extra-small fw-medium text-muted">8 PRODUCTS</div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-6 col-xl-4 sh-19">
-                        <div class="card h-100 hover-scale-up">
-                            <a class="card-body text-center" href="#">
-                                <i data-cs-icon="pear" class="text-primary"></i>
-                                <p class="heading mt-3 text-body">Fruits</p>
-                                <div class="text-extra-small fw-medium text-muted">9 PRODUCTS</div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-6 col-xl-4 sh-19">
-                        <div class="card h-100 hover-scale-up">
-                            <a class="card-body text-center" href="#">
-                                <i data-cs-icon="mushrooms" class="text-primary"></i>
-                                <p class="heading mt-3 text-body">Mushrooms</p>
-                                <div class="text-extra-small fw-medium text-muted">3 PRODUCTS</div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-6 col-xl-4 sh-19">
-                        <div class="card h-100 hover-scale-up">
-                            <a class="card-body text-center" href="#">
-                                <i data-cs-icon="water" class="text-primary"></i>
-                                <p class="heading mt-3 text-body">Drinks</p>
-                                <div class="text-extra-small fw-medium text-muted">4 PRODUCTS</div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Categories End -->
-        </div>
-
-        <!-- Banners Start -->
-        <h2 class="small-title">Extend Your Knowledge</h2>
-        <div class="row">
-            <div class="col-12 col-md-4 mb-5">
-                <div class="card w-100 sh-18 sh-md-22 hover-img-scale-up">
-                    <img src="img/banner/cta-standard-1.jpg" class="card-img h-100 scale" alt="card image" />
-                    <div class="card-img-overlay d-flex flex-column justify-content-between bg-transparent">
-                        <div class="d-flex flex-column h-100 justify-content-between align-items-start">
-                            <div class="cta-3 text-black">
-                                Introduction
-                                <br />
-                                to Bread Making
-                            </div>
-                            <a href="Pages.Blog.List.html" class="btn btn-icon btn-icon-start btn-primary stretched-link">
-                                <i data-cs-icon="chevron-right"></i>
-                                <span>View</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-12 col-md-4 mb-5">
-                <div class="card w-100 sh-18 sh-md-22 hover-img-scale-up">
-                    <img src="img/banner/cta-standard-2.jpg" class="card-img h-100 scale" alt="card image" />
-                    <div class="card-img-overlay d-flex flex-column justify-content-between bg-transparent">
-                        <div class="d-flex flex-column h-100 justify-content-between align-items-start">
-                            <div class="cta-3 text-black">
-                                Basic Principles
-                                <br />
-                                of Cooking
-                            </div>
-                            <a href="Pages.Blog.List.html" class="btn btn-icon btn-icon-start btn-primary stretched-link">
-                                <i data-cs-icon="chevron-right"></i>
-                                <span>View</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-12 col-md-4 mb-5">
-                <div class="card w-100 sh-18 sh-md-22 hover-img-scale-up">
-                    <img src="img/banner/cta-standard-3.jpg" class="card-img h-100 scale" alt="card image" />
-                    <div class="card-img-overlay d-flex flex-column justify-content-between bg-transparent">
-                        <div class="d-flex flex-column h-100 justify-content-between align-items-start">
-                            <div class="cta-3 text-black">
-                                Easy & Practical
-                                <br />
-                                Recipes
-                            </div>
-                            <a href="Pages.Blog.List.html" class="btn btn-icon btn-icon-start btn-primary stretched-link">
-                                <i data-cs-icon="chevron-right"></i>
-                                <span>View</span>
-                            </a>
-                        </div>
-                    </div>
+                    <button type="button" class="btn btn-outline-primary btn-icon btn-icon-start ms-1" id="newTaskButton">
+                        <i data-acorn-icon="plus"></i>
+                        <span>New Task</span>
+                    </button>
                 </div>
             </div>
         </div>
-        <!-- Banners End -->
-
-        <div class="row gy-5">
-            <!-- Help Start -->
-            <div class="col-12 col-xl-4">
-                <h2 class="small-title">Help</h2>
-                <div class="card h-100-card">
-                    <div class="card-body">
-                        <div class="cta-3">Do you need help?</div>
-                        <div class="mb-3 cta-3 text-primary">Search for documentation!</div>
-                        <div class="text-muted mb-4">Cheesecake chocolate carrot cake pie drops. Brownie ice cream marshmallow topping.</div>
-                        <form>
-                            <div class="mb-3 filled w-100">
-                                <i data-cs-icon="diagram-1"></i>
-                                <select class="select-single-no-search-filled select2-hidden-accessible" id="categorySelect" data-placeholder="Category">
-                                    <option label="&nbsp;"></option>
-                                    <option value="Breads">Breads</option>
-                                    <option value="Pies">Pies</option>
-                                    <option value="Desserts">Desserts</option>
-                                </select>
+        <div class="row g-0">
+            <div class="col-auto d-none d-lg-flex">
+                <div class="nav flex-column sw-25 mt-n2" id="tasksMenuColumn">
+                </div>
+            </div>
+            <div class="col">
+                <div class="row g-2 row-cols-1 row-cols-lg-2 row-cols-xl-3" id="tasksContainer">
+                    <template id="taskItemTemplate">
+                        <div class="col task-item">
+                            <div class="card h-100">
+                                <div class="card-body position-relative">
+                                    <button type="button" class="btn btn-foreground hover-outline btn-icon btn-icon-only btn-sm position-absolute e-0 t-0 me-card mt-card z-index-1" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i data-acorn-icon="more-horizontal"></i>
+                                    </button>
+                                    <div class="dropdown-menu dropdown-menu-end task-buttons">
+                                        <a class="dropdown-item edit-task d-none" href="#">Edit</a>
+                                        <a class="dropdown-item delete-task d-none" href="#">Delete</a>
+                                        <a class="dropdown-item undo-delete-task d-none" href="#">Undo Delete</a>
+                                        <a class="dropdown-item delete-permanently-task d-none" href="#">Delete Permanently</a>
+                                    </div>
+                                    <div class="h-100">
+                                        <label class="form-check custom-icon mb-0 checked-line-through checked-opacity-75 h-100">
+                                            <input type="checkbox" class="form-check-input check-input">
+                                            <span class="form-check-label h-100 text-decoration-none">
+                                                <span class="content h-100 text-decoration-none d-flex flex-column justify-content-between">
+                                                    <span class="mb-3 h5 pe-7 lh-1-5 title"></span>
+                                                    <span class="text-alternate mb-4 flex-grow-1 detail"></span>
+                                                    <div class="tags"></div>
+                                                </span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="mb-3 filled">
-                                <i data-cs-icon="help"></i>
-                                <input class="form-control" placeholder="Search" />
+                        </div>
+                    </template>
+                    <template id="taskTagTemplate">
+                        <span class="badge opacity-75 text-decoration-none me-1"></span>
+                    </template>
+                    <template id="noTasksFound">
+                        <div class="col-12 small-gutter-col mb-2 flex-grow-1 mw-100">
+                            <div class="h-100">
+                                <div class="text-center">
+                                    <i class="cs-warning-hexagon text-primary"></i>
+                                    <p class="mb-0">No tasks found!</p>
+                                </div>
                             </div>
-                            <a href="#" class="btn btn-icon btn-icon-start btn-primary mt-3">
-                                <i data-cs-icon="chevron-right"></i>
-                                <span>Search</span>
-                            </a>
-                        </form>
+                        </div>
+                    </template>
+                </div>
+            </div>
+        </div>
+        <div class="modal modal-right fade" id="tasksMenuModal" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Tasks</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="tasksMenuMoveContent" data-move-target="#tasksMenuColumn" data-move-breakpoint="lg">
+                            <div class="menu-items">
+                                <a class="nav-link px-0 task-menu-item" href="#" data-menuid="1" data-show='{"deleted": false, "status":"All", "tags": "All"}'>
+                                    <i data-acorn-icon="inbox" data-acorn-size="17" class="me-2"></i>
+                                    <span class="d-inline-block mt-1 align-middle">All</span>
+                                </a>
+                                <a class="nav-link px-0 task-menu-item" href="#" data-menuid="2" data-show='{"deleted": false, "status": "Active", "tags": "All"}'>
+                                    <i data-acorn-icon="trend-up" data-acorn-size="17" class="me-2"></i>
+                                    <span class="d-inline-block mt-1 align-middle">Active</span>
+                                </a>
+                                <a class="nav-link px-0 task-menu-item" href="#" data-menuid="3" data-show='{"deleted": false, "status": "Done", "tags": "All"}'>
+                                    <i data-acorn-icon="trend-down" data-acorn-size="17" class="me-2"></i>
+                                    <span class="d-inline-block mt-1 align-middle">Done</span>
+                                </a>
+                                <a class="nav-link px-0 dropdown-toggle" href="#menuTagButtons" data-bs-toggle="collapse" aria-expanded="true">
+                                    <i data-acorn-icon="tag" data-acorn-size="17" class="me-2"></i>
+                                    <span class="d-inline-block align-middle">Tags</span>
+                                </a>
+                                <div class="collapse show" id="menuTagButtons">
+                                    <a class="nav-link px-0 task-menu-item" href="#" data-menuid="4" data-show='{"deleted": false, "status": "All", "tags":"Project"}'>
+                                        <i class="align-middle me-2 sw-2 d-inline-block"></i>
+                                        <i data-acorn-icon="circle" data-acorn-size="17" class="me-2 text-primary"></i>
+                                        <span class="d-inline-block mt-1 align-middle">Project</span>
+                                    </a>
+                                    <a class="nav-link px-0 py-2 task-menu-item" href="#" data-menuid="5" data-show='{"deleted": false, "status": "All", "tags":"Personal"}'>
+                                        <i class="align-middle me-2 sw-2 d-inline-block"></i>
+                                        <i data-acorn-icon="circle" data-acorn-size="17" class="me-2 text-warning"></i>
+                                        <span class="d-inline-block mt-1 align-middle">Personal</span>
+                                    </a>
+                                    <a class="nav-link px-0 py-2 task-menu-item" href="#" data-menuid="6" data-show='{"deleted": false, "status": "All", "tags":"Urgent"}'>
+                                        <i class="align-middle me-2 sw-2 d-inline-block"></i>
+                                        <i data-acorn-icon="circle" data-acorn-size="17" class="me-2 text-danger"></i>
+                                        <span class="d-inline-block mt-1 align-middle">Urgent</span>
+                                    </a>
+                                    <a class="nav-link px-0 py-2 task-menu-item" href="#" data-menuid="7" data-show='{"deleted": false, "status": "All", "tags":"Lists"}'>
+                                        <i class="align-middle me-2 sw-2 d-inline-block"></i>
+                                        <i data-acorn-icon="circle" data-acorn-size="17" class="me-2 text-success"></i>
+                                        <span class="d-inline-block mt-1 align-middle">Lists</span>
+                                    </a>
+                                </div>
+                                <a class="nav-link px-0 border-separator-light task-menu-item" href="#" data-menuid="8" data-show='{"deleted": true, "status":"All", "tags": "All"}'>
+                                    <i data-acorn-icon="bin"></i>
+                                    <span class="align-middle">Trash</span>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <!-- Help End -->
-
-            <!-- Video Guide Start -->
-            <div class="col-12 col-xl-8">
-                <h2 class="small-title">Video Guide</h2>
-                <div class="card h-100-card sh-md-45 bg-transparent">
-                    <video class="player cover" poster="img/product/large/bread.jpg" id="videoGuide">
-                        <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4" type="video/mp4" />
-                    </video>
+        </div>
+        <div class="modal modal-right fade" id="newTaskModal" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="taskModalTitle">New Task</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body d-flex flex-column">
+                        <div class="mb-3 filled w-100 d-flex flex-column">
+                            <i data-acorn-icon="edit-square"></i>
+                            <input class="form-control" placeholder="Title" id="newTaskTitle">
+                        </div>
+                        <div class="mb-3 filled">
+                            <textarea placeholder="Detail" class="form-control" rows="4" id="newTaskDetail"></textarea>
+                            <i data-acorn-icon="notebook-1"></i>
+                        </div>
+                        <div class="mb-3 filled w-100">
+                            <i data-acorn-icon="bookmark"></i>
+                            <select data-placeholder="Tags" multiple="multiple" id="newTaskTags">
+                                <option label="&nbsp;"></option>
+                                <option data-class="border-primary" data-selection-color="text-primary" value="Project">Project</option>
+                                <option data-class="border-warning" data-selection-color="text-warning" value="Personal">Personal</option>
+                                <option data-class="border-danger" data-selection-color="text-danger" value="Urgent">Urgent</option>
+                                <option data-class="border-success" data-selection-color="text-success" value="Lists">Lists</option>
+                            </select>
+                        </div>
+                        <div class="mb-3 filled mb-0 w-100">
+                            <i data-acorn-icon="activity"></i>
+                            <select class="select-single-no-search-filled" data-placeholder="Status" id="newTaskStatus">
+                                <option label="&nbsp;"></option>
+                                <option value="Active">Active</option>
+                                <option value="Done">Done</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="modal-footer border-0">
+                        <button class="btn btn-icon btn-icon-end btn-primary d-none" type="button" id="newTaskAddButton">
+                            <span>Add</span>
+                            <i data-acorn-icon="plus"></i>
+                        </button>
+                        <button class="btn btn-icon btn-icon-end btn-primary d-none" type="button" id="saveTaskButton">
+                            <span>Save</span>
+                            <i data-acorn-icon="check"></i>
+                        </button>
+                    </div>
                 </div>
             </div>
-            <!-- Video Guide End -->
         </div>
     </div>
 </main>
-<!-- Layout Footer Start -->
-<footer>
-    <div class="footer-content">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col-sm-6">
-                    <p class="mb-0 text-muted text-medium">Colored Strategies 2021</p>
-                </div>
-                <div class="col-sm-6 d-none d-sm-block">
-                    <ul class="breadcrumb pt-0 pe-0 mb-0 float-end">
-                        <li class="breadcrumb-item mb-0 text-medium"><a href="#" class="btn-link">Review</a></li>
-                        <li class="breadcrumb-item mb-0 text-medium"><a href="#" class="btn-link">Purchase</a></li>
-                        <li class="breadcrumb-item mb-0 text-medium"><a href="#" class="btn-link">Docs</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</footer>
-<!-- Layout Footer End -->
-</div>
-
-<!-- Theme Settings Modal Start -->
-<div class="modal fade modal-right scroll-out-negative" id="settings" data-bs-backdrop="true" tabindex="-1" role="dialog" aria-labelledby="settings" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-scrollable full" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">Theme Settings</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-
-            <div class="modal-body">
-                <div class="scroll-track-visible">
-                    <div class="mb-5" id="color">
-                        <label class="mb-3 d-inline-block form-label">Color</label>
-                        <div class="row d-flex g-3 justify-content-between flex-wrap mb-3">
-                            <a href="#" class="flex-grow-1 w-50 option col" data-value="light-blue" data-parent="color">
-                                <div class="card rounded-md p-3 mb-1 no-shadow color">
-                                    <div class="blue-light"></div>
-                                </div>
-                                <div class="text-muted text-part">
-                                    <span class="text-extra-small align-middle">LIGHT BLUE</span>
-                                </div>
-                            </a>
-                            <a href="#" class="flex-grow-1 w-50 option col" data-value="dark-blue" data-parent="color">
-                                <div class="card rounded-md p-3 mb-1 no-shadow color">
-                                    <div class="blue-dark"></div>
-                                </div>
-                                <div class="text-muted text-part">
-                                    <span class="text-extra-small align-middle">DARK BLUE</span>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="row d-flex g-3 justify-content-between flex-wrap mb-3">
-                            <a href="#" class="flex-grow-1 w-50 option col" data-value="light-red" data-parent="color">
-                                <div class="card rounded-md p-3 mb-1 no-shadow color">
-                                    <div class="red-light"></div>
-                                </div>
-                                <div class="text-muted text-part">
-                                    <span class="text-extra-small align-middle">LIGHT RED</span>
-                                </div>
-                            </a>
-                            <a href="#" class="flex-grow-1 w-50 option col" data-value="dark-red" data-parent="color">
-                                <div class="card rounded-md p-3 mb-1 no-shadow color">
-                                    <div class="red-dark"></div>
-                                </div>
-                                <div class="text-muted text-part">
-                                    <span class="text-extra-small align-middle">DARK RED</span>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="row d-flex g-3 justify-content-between flex-wrap mb-3">
-                            <a href="#" class="flex-grow-1 w-50 option col" data-value="light-green" data-parent="color">
-                                <div class="card rounded-md p-3 mb-1 no-shadow color">
-                                    <div class="green-light"></div>
-                                </div>
-                                <div class="text-muted text-part">
-                                    <span class="text-extra-small align-middle">LIGHT GREEN</span>
-                                </div>
-                            </a>
-                            <a href="#" class="flex-grow-1 w-50 option col" data-value="dark-green" data-parent="color">
-                                <div class="card rounded-md p-3 mb-1 no-shadow color">
-                                    <div class="green-dark"></div>
-                                </div>
-                                <div class="text-muted text-part">
-                                    <span class="text-extra-small align-middle">DARK GREEN</span>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="row d-flex g-3 justify-content-between flex-wrap mb-3">
-                            <a href="#" class="flex-grow-1 w-50 option col" data-value="light-purple" data-parent="color">
-                                <div class="card rounded-md p-3 mb-1 no-shadow color">
-                                    <div class="purple-light"></div>
-                                </div>
-                                <div class="text-muted text-part">
-                                    <span class="text-extra-small align-middle">LIGHT PURPLE</span>
-                                </div>
-                            </a>
-                            <a href="#" class="flex-grow-1 w-50 option col" data-value="dark-purple" data-parent="color">
-                                <div class="card rounded-md p-3 mb-1 no-shadow color">
-                                    <div class="purple-dark"></div>
-                                </div>
-                                <div class="text-muted text-part">
-                                    <span class="text-extra-small align-middle">DARK PURPLE</span>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="row d-flex g-3 justify-content-between flex-wrap mb-3">
-                            <a href="#" class="flex-grow-1 w-50 option col" data-value="light-pink" data-parent="color">
-                                <div class="card rounded-md p-3 mb-1 no-shadow color">
-                                    <div class="pink-light"></div>
-                                </div>
-                                <div class="text-muted text-part">
-                                    <span class="text-extra-small align-middle">LIGHT PINK</span>
-                                </div>
-                            </a>
-                            <a href="#" class="flex-grow-1 w-50 option col" data-value="dark-pink" data-parent="color">
-                                <div class="card rounded-md p-3 mb-1 no-shadow color">
-                                    <div class="pink-dark"></div>
-                                </div>
-                                <div class="text-muted text-part">
-                                    <span class="text-extra-small align-middle">DARK PINK</span>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="mb-5" id="navcolor">
-                        <label class="mb-3 d-inline-block form-label">Override Nav Palette</label>
-                        <div class="row d-flex g-3 justify-content-between flex-wrap">
-                            <a href="#" class="flex-grow-1 w-33 option col" data-value="default" data-parent="navcolor">
-                                <div class="card rounded-md p-3 mb-1 no-shadow">
-                                    <div class="figure figure-primary top"></div>
-                                    <div class="figure figure-secondary bottom"></div>
-                                </div>
-                                <div class="text-muted text-part">
-                                    <span class="text-extra-small align-middle">DEFAULT</span>
-                                </div>
-                            </a>
-                            <a href="#" class="flex-grow-1 w-33 option col" data-value="light" data-parent="navcolor">
-                                <div class="card rounded-md p-3 mb-1 no-shadow">
-                                    <div class="figure figure-secondary figure-light top"></div>
-                                    <div class="figure figure-secondary bottom"></div>
-                                </div>
-                                <div class="text-muted text-part">
-                                    <span class="text-extra-small align-middle">LIGHT</span>
-                                </div>
-                            </a>
-                            <a href="#" class="flex-grow-1 w-33 option col" data-value="dark" data-parent="navcolor">
-                                <div class="card rounded-md p-3 mb-1 no-shadow">
-                                    <div class="figure figure-muted figure-dark top"></div>
-                                    <div class="figure figure-secondary bottom"></div>
-                                </div>
-                                <div class="text-muted text-part">
-                                    <span class="text-extra-small align-middle">DARK</span>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="mb-5" id="placement">
-                        <label class="mb-3 d-inline-block form-label">Menu Placement</label>
-                        <div class="row d-flex g-3 justify-content-between flex-wrap">
-                            <a href="#" class="flex-grow-1 w-50 option col" data-value="horizontal" data-parent="placement">
-                                <div class="card rounded-md p-3 mb-1 no-shadow">
-                                    <div class="figure figure-primary top"></div>
-                                    <div class="figure figure-secondary bottom"></div>
-                                </div>
-                                <div class="text-muted text-part">
-                                    <span class="text-extra-small align-middle">HORIZONTAL</span>
-                                </div>
-                            </a>
-                            <a href="#" class="flex-grow-1 w-50 option col" data-value="vertical" data-parent="placement">
-                                <div class="card rounded-md p-3 mb-1 no-shadow">
-                                    <div class="figure figure-primary left"></div>
-                                    <div class="figure figure-secondary right"></div>
-                                </div>
-                                <div class="text-muted text-part">
-                                    <span class="text-extra-small align-middle">VERTICAL</span>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="mb-5" id="behaviour">
-                        <label class="mb-3 d-inline-block form-label">Menu Behaviour</label>
-                        <div class="row d-flex g-3 justify-content-between flex-wrap">
-                            <a href="#" class="flex-grow-1 w-50 option col" data-value="pinned" data-parent="behaviour">
-                                <div class="card rounded-md p-3 mb-1 no-shadow">
-                                    <div class="figure figure-primary left large"></div>
-                                    <div class="figure figure-secondary right small"></div>
-                                </div>
-                                <div class="text-muted text-part">
-                                    <span class="text-extra-small align-middle">PINNED</span>
-                                </div>
-                            </a>
-                            <a href="#" class="flex-grow-1 w-50 option col" data-value="unpinned" data-parent="behaviour">
-                                <div class="card rounded-md p-3 mb-1 no-shadow">
-                                    <div class="figure figure-primary left"></div>
-                                    <div class="figure figure-secondary right"></div>
-                                </div>
-                                <div class="text-muted text-part">
-                                    <span class="text-extra-small align-middle">UNPINNED</span>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="mb-5" id="layout">
-                        <label class="mb-3 d-inline-block form-label">Layout</label>
-                        <div class="row d-flex g-3 justify-content-between flex-wrap">
-                            <a href="#" class="flex-grow-1 w-50 option col" data-value="fluid" data-parent="layout">
-                                <div class="card rounded-md p-3 mb-1 no-shadow">
-                                    <div class="figure figure-primary top"></div>
-                                    <div class="figure figure-secondary bottom"></div>
-                                </div>
-                                <div class="text-muted text-part">
-                                    <span class="text-extra-small align-middle">FLUID</span>
-                                </div>
-                            </a>
-                            <a href="#" class="flex-grow-1 w-50 option col" data-value="boxed" data-parent="layout">
-                                <div class="card rounded-md p-3 mb-1 no-shadow">
-                                    <div class="figure figure-primary top"></div>
-                                    <div class="figure figure-secondary bottom small"></div>
-                                </div>
-                                <div class="text-muted text-part">
-                                    <span class="text-extra-small align-middle">BOXED</span>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="mb-5" id="radius">
-                        <label class="mb-3 d-inline-block form-label">Radius</label>
-                        <div class="row d-flex g-3 justify-content-between flex-wrap">
-                            <a href="#" class="flex-grow-1 w-33 option col" data-value="rounded" data-parent="radius">
-                                <div class="card rounded-md radius-rounded p-3 mb-1 no-shadow">
-                                    <div class="figure figure-primary top"></div>
-                                    <div class="figure figure-secondary bottom"></div>
-                                </div>
-                                <div class="text-muted text-part">
-                                    <span class="text-extra-small align-middle">ROUNDED</span>
-                                </div>
-                            </a>
-                            <a href="#" class="flex-grow-1 w-33 option col" data-value="standard" data-parent="radius">
-                                <div class="card rounded-md radius-regular p-3 mb-1 no-shadow">
-                                    <div class="figure figure-primary top"></div>
-                                    <div class="figure figure-secondary bottom"></div>
-                                </div>
-                                <div class="text-muted text-part">
-                                    <span class="text-extra-small align-middle">STANDARD</span>
-                                </div>
-                            </a>
-                            <a href="#" class="flex-grow-1 w-33 option col" data-value="flat" data-parent="radius">
-                                <div class="card rounded-md radius-flat p-3 mb-1 no-shadow">
-                                    <div class="figure figure-primary top"></div>
-                                    <div class="figure figure-secondary bottom"></div>
-                                </div>
-                                <div class="text-muted text-part">
-                                    <span class="text-extra-small align-middle">FLAT</span>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<button type="button" class="btn settings-button btn-gradient-primary" data-bs-toggle="modal" data-bs-target="#settings" id="settingsButton">
-    <i data-cs-icon="paint-roller" class="position-relative"></i>
-</button>
-<!-- Theme Settings Modal End -->
-
-<!-- Search Modal Start -->
-<div class="modal fade modal-under-nav modal-search modal-close-out" id="searchPagesModal" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header border-0 p-0">
-                <button type="button" class="btn-close btn btn-icon btn-icon-only btn-foreground" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body ps-5 pe-5 pb-0 border-0">
-                <input id="searchPagesInput" class="form-control form-control-xl borderless ps-0 pe-0 mb-1 auto-complete" type="text" autocomplete="off" />
-            </div>
-            <div class="modal-footer border-top justify-content-start ps-5 pe-5 pb-3 pt-3 border-0">
-                <span class="text-alternate d-inline-block m-0 me-3">
-                    <i data-cs-icon="arrow-bottom" data-cs-size="15" class="text-alternate align-middle me-1"></i>
-                    <span class="align-middle text-medium">Navigate</span>
-                </span>
-                <span class="text-alternate d-inline-block m-0 me-3">
-                    <i data-cs-icon="arrow-bottom-left" data-cs-size="15" class="text-alternate align-middle me-1"></i>
-                    <span class="align-middle text-medium">Select</span>
-                </span>
-            </div>
-        </div>
-    </div>
-</div>
