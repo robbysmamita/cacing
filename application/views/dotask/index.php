@@ -34,15 +34,35 @@
                 <!-- Sales & Stocks Charts Start -->
                 <div class="mb-5">
                     <h2 class="small-title">To Do (Plan)</h2>
-                    <div class="card mb-2 h-auto sh-xl-24">
+                    <div class="card">
                         <div class="card-body">
-                            <div class="row g-0 h-100 chart-container">
-                                <!-- Contents for below are provided from js -->
-                                <div class="col-12 col-sm-auto d-flex flex-column justify-content-between custom-tooltip pe-0 pe-sm-4">
+                            <ul class="list-group ">
+                                <li class="list-group-item list-group-item-success">
+                                    <input type="checkbox" name="task" id="task" value="1" />
+                                    <label for="task" class="strikethrough">Task</label>
+                                </li>
+                                <li class="list-group-item list-group-item-success">
+                                    <input type="checkbox" name="task" id="task" value="1" />
+                                    <label for="task" class="strikethrough">Task</label>
+                                </li>
+                                <li class="list-group-item list-group-item-success">
+                                    <input type="checkbox" name="task" id="task" value="1" />
+                                    <label for="task" class="strikethrough">Task</label>
+                                </li>
+                                <li class="list-group-item list-group-item-success">
+                                    <input type="checkbox" name="task" id="task" value="1" />
+                                    <label for="task" class="strikethrough">Task</label>
+                                </li>
+                                <li class="list-group-item list-group-item-success">
+                                    <input type="checkbox" name="task" id="task" value="1" />
+                                    <label for="task" class="strikethrough">Task</label>
+                                </li>
+                                <li class="list-group-item list-group-item-success">
+                                    <input type="checkbox" name="task" id="task" value="1" />
+                                    <label for="task" class="strikethrough">Task</label>
+                                </li>
+                            </ul>
 
-                                </div>
-
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -52,14 +72,36 @@
                 <!-- Sales & Stocks Charts Start -->
                 <div class="mb-5">
                     <h2 class="small-title">Do Today</h2>
-                    <div class="card mb-2 h-auto sh-xl-24">
-                        <div class="card-body">
-                            <div class="row g-0 h-100 chart-container">
-                                <!-- Contents for below are provided from js -->
-                                <div class="col-12 col-sm-auto d-flex flex-column justify-content-between custom-tooltip pe-0 pe-sm-4">
 
-                                </div>
-                            </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <ul class="list-group ">
+                                <li class="list-group-item list-group-item-success">
+                                    <input type="checkbox" name="task" id="task" value="1" />
+                                    <label for="task" class="strikethrough">Task</label>
+                                </li>
+                                <li class="list-group-item list-group-item-success">
+                                    <input type="checkbox" name="task" id="task" value="1" />
+                                    <label for="task" class="strikethrough">Task</label>
+                                </li>
+                                <li class="list-group-item list-group-item-success">
+                                    <input type="checkbox" name="task" id="task" value="1" />
+                                    <label for="task" class="strikethrough">Task</label>
+                                </li>
+                                <li class="list-group-item list-group-item-success">
+                                    <input type="checkbox" name="task" id="task" value="1" />
+                                    <label for="task" class="strikethrough">Task</label>
+                                </li>
+                                <li class="list-group-item list-group-item-success">
+                                    <input type="checkbox" name="task" id="task" value="1" />
+                                    <label for="task" class="strikethrough">Task</label>
+                                </li>
+                                <li class="list-group-item list-group-item-success">
+                                    <input type="checkbox" name="task" id="task" value="1" />
+                                    <label for="task" class="strikethrough">Task</label>
+                                </li>
+                            </ul>
+
                         </div>
                     </div>
                 </div>
@@ -69,15 +111,35 @@
                 <!-- Sales & Stocks Charts Start -->
                 <div class="mb-5">
                     <h2 class="small-title"> In Progress</h2>
-                    <div class="card mb-2 h-auto sh-xl-24">
+                    <div class="card">
                         <div class="card-body">
-                            <div class="row g-0 h-100 chart-container">
-                                <!-- Contents for below are provided from js -->
-                                <div class="col-12 col-sm-auto d-flex flex-column justify-content-between custom-tooltip pe-0 pe-sm-4">
+                            <ul class="list-group ">
+                                <li class="list-group-item list-group-item-success">
+                                    <input type="checkbox" name="task" id="task" value="1" />
+                                    <label for="task" class="strikethrough">Task</label>
+                                </li>
+                                <li class="list-group-item list-group-item-success">
+                                    <input type="checkbox" name="task" id="task" value="1" />
+                                    <label for="task" class="strikethrough">Task</label>
+                                </li>
+                                <li class="list-group-item list-group-item-success">
+                                    <input type="checkbox" name="task" id="task" value="1" />
+                                    <label for="task" class="strikethrough">Task</label>
+                                </li>
+                                <li class="list-group-item list-group-item-success">
+                                    <input type="checkbox" name="task" id="task" value="1" />
+                                    <label for="task" class="strikethrough">Task</label>
+                                </li>
+                                <li class="list-group-item list-group-item-success">
+                                    <input type="checkbox" name="task" id="task" value="1" />
+                                    <label for="task" class="strikethrough">Task</label>
+                                </li>
+                                <li class="list-group-item list-group-item-success">
+                                    <input type="checkbox" name="task" id="task" value="1" />
+                                    <label for="task" class="strikethrough">Task</label>
+                                </li>
+                            </ul>
 
-                                </div>
-
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -87,45 +149,34 @@
                 <!-- Sales & Stocks Charts Start -->
                 <div class="mb-5">
                     <h2 class="small-title">Done</h2>
-                    <div class="card mb-2 h-100 sh-xl-24">
+                    <div class="card">
                         <div class="card-body">
-                            <div class="row g-50 h-100 chart-container">
-                                <!-- Contents for below are provided from js -->
-                                <div class="col-12 col-sm-auto d-flex flex-column justify-content-start  custom-tooltip pe-0 pe-sm-4">
-                                    <ul class="list-group ">
-                                        <li class="list-group-item list-group-item-success">
-                                            <input type="checkbox" name="task" id="task" value="1" />
-                                            <label for="task" class="strikethrough">Task</label>
-                                        </li>
-                                        <li class="list-group-item list-group-item-success">
-                                            <input type="checkbox" name="task" id="task" value="1" />
-                                            <label for="task" class="strikethrough">Task</label>
-                                        </li>
-                                        <li class="list-group-item list-group-item-success">
-                                            <input type="checkbox" name="task" id="task" value="1" />
-                                            <label for="task" class="strikethrough">Task</label>
-                                        </li>
-                                        <li class="list-group-item list-group-item-success">
-                                            <input type="checkbox" name="task" id="task" value="1" />
-                                            <label for="task" class="strikethrough">Task</label>
-                                        </li>
-                                        <li class="list-group-item list-group-item-success">
-                                            <input type="checkbox" name="task" id="task" value="1" />
-                                            <label for="task" class="strikethrough">Task</label>
-                                        </li>
-                                        <li class="list-group-item list-group-item-success">
-                                            <input type="checkbox" name="task" id="task" value="1" />
-                                            <label for="task" class="strikethrough">Task</label>
-                                        </li>
-                                    </ul>
-
-                                </div>
-                                <style>
-                                    input[type=checkbox]:checked+label.strikethrough {
-                                        text-decoration: line-through;
-                                    }
-                                </style>
-                            </div>
+                            <ul class="list-group ">
+                                <li class="list-group-item list-group-item-success">
+                                    <input type="checkbox" name="task" id="task" value="1" />
+                                    <label for="task" class="strikethrough">Task</label>
+                                </li>
+                                <li class="list-group-item list-group-item-success">
+                                    <input type="checkbox" name="task" id="task" value="1" />
+                                    <label for="task" class="strikethrough">Task</label>
+                                </li>
+                                <li class="list-group-item list-group-item-success">
+                                    <input type="checkbox" name="task" id="task" value="1" />
+                                    <label for="task" class="strikethrough">Task</label>
+                                </li>
+                                <li class="list-group-item list-group-item-success">
+                                    <input type="checkbox" name="task" id="task" value="1" />
+                                    <label for="task" class="strikethrough">Task</label>
+                                </li>
+                                <li class="list-group-item list-group-item-success">
+                                    <input type="checkbox" name="task" id="task" value="1" />
+                                    <label for="task" class="strikethrough">Task</label>
+                                </li>
+                                <li class="list-group-item list-group-item-success">
+                                    <input type="checkbox" name="task" id="task" value="1" />
+                                    <label for="task" class="strikethrough">Task</label>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
