@@ -45,6 +45,9 @@
     <link rel="stylesheet" href="<?= base_url('assets/') ?>css/vendor/select2.min.css" />
     <link rel="stylesheet" href="<?= base_url('assets/') ?>css/vendor/select2-bootstrap4.min.css" />
     <link rel="stylesheet" href="<?= base_url('assets/') ?>css/vendor/plyr.css" />
+    <link rel="stylesheet" href="<?= base_url('assets/') ?>css/font-awesome.css" />
+    <link rel="stylesheet" href="<?= base_url('assets/') ?>css/vendor/quill.bubble.css" />
+    <link rel="stylesheet" href="<?= base_url('assets/') ?>css/vendor/quill.snow.css" />
     <!-- Vendor Styles End -->
     <!-- Template Base Styles Start -->
     <link rel="stylesheet" href="<?= base_url('assets/') ?>css/styles.css" />

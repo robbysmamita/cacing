@@ -316,6 +316,16 @@
 <script src="<?= base_url('assets/') ?>js/vendor/intro.min.js"></script>
 <script src="<?= base_url('assets/') ?>js/vendor/select2.full.min.js"></script>
 <script src="<?= base_url('assets/') ?>js/vendor/plyr.min.js"></script>
+<script src="<?= base_url('assets/') ?>js/icons/whether-icon-clipart.js"></script>
+<script src="<?= base_url('assets/') ?>js/icons/icons-notify.js"></script>
+<script src="<?= base_url('assets/') ?>js/icons/icon-clipart.js"></script>
+<script src="<?= base_url('assets/') ?>js/icons/flag-icon-clipart.js"></script>
+<script src="<?= base_url('assets/') ?>js/icons/feather-icon/feather.min.js"></script>
+<script src="<?= base_url('assets/') ?>js/icons/feather-icon/feather-icon.js"></script>
+<script src="<?= base_url('assets/') ?>js/icons/feather-icon/feather-icon-clipart.js"></script>
+<script src="<?= base_url('assets/') ?>js/vendor/quill.min.js"></script>
+<script src="<?= base_url('assets/') ?>js/vendor/quill.active.js"></script>
+<script src="<?= base_url('assets/') ?>js/forms/controls.editor.js"></script>
 <!-- Vendor Scripts End -->
 
 <!-- Template Base Scripts Start -->
