@@ -325,7 +325,10 @@
 <script src="<?= base_url('assets/') ?>js/icons/feather-icon/feather-icon-clipart.js"></script>
 <script src="<?= base_url('assets/') ?>js/vendor/quill.min.js"></script>
 <script src="<?= base_url('assets/') ?>js/vendor/quill.active.js"></script>
+<script src="<?= base_url('assets/') ?>js/vendor/datepicker/bootstrap-datepicker.min.js"></script>
+<script src="<?= base_url('assets/') ?>js/vendor/datepicker/locales/bootstrap-datepicker.es.min.js"></script>
 <script src="<?= base_url('assets/') ?>js/forms/controls.editor.js"></script>
+<script src="<?= base_url('assets/') ?>js/forms/controls.datepicker.js"></script>
 <!-- Vendor Scripts End -->
 
 <!-- Template Base Scripts Start -->

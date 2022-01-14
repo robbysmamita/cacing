@@ -19,6 +19,59 @@ class Dotask extends CI_Controller
         $this->load->view('dotask/index', $data);
         $this->load->view('layout/footer', $data);
     }
+
+    public function add()
+    {
+        $this->form_validation->set_rules(
+            'name_task',
+            'Name task',
+            'required'
+        );
+        // $this->form_validation->set_rules(
+        //     'content',
+        //     'Content',
+        //     'required'
+        // );
+        $this->form_validation->set_rules(
+            'start_date',
+            'Start Date',
+            'required'
+        );
+        $this->form_validation->set_rules(
+            'start_time',
+            'Start Time',
+            'required'
+        );
+        $this->form_validation->set_rules(
+            'due_date',
+            'Due Date',
+            'required'
+        );
+        $this->form_validation->set_rules(
+            'due_time',
+            'Due Time',
+            'required'
+        );
+        $this->form_validation->set_rules(
+            'status',
+            'Status',
+            'required'
+        );
+        if ($this->form_validation->run() == FALSE) {
+
+            $data['title'] = "CACING - Baca Catat Ingat";
+            $data['dotask'] = $this->Dotask_model->getTodo();
+            $this->load->view('layout/header', $data);
+            $this->load->view('layout/navbar', $data);
+            $this->load->view('dotask/add', $data);
+            $this->load->view('layout/footer', $data);
+        } else {
+            $this->Dotask_model->add();
+            $this->session->set_flashdata('dotask', 'Added');
+            redirect('Dotask');
+        }
+    }
+
     public function edit($id)
     {
         $data['title'] = "CACING - Baca Catat Ingat";

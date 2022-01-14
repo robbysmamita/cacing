@@ -50,20 +50,31 @@
         </div>
         <!-- Title and Top Buttons End -->
 
+        <?php if ($this->session->flashdata('dotask')) : ?>
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <strong>Congratulation!</strong>
+                Data has been <strong><?= $this->session->flashdata('dotask') ?></strong>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        <?php endif ?>
+
         <div class="row">
             <div class="col-12 col-xl-3">
                 <!-- Sales & Stocks Charts Start -->
                 <div class="mb-5">
-                    <h2 class="small-title">To Do (Plan)</h2>
-                    <div class="card">
+                    <h2 class="small-title">To Do (Plan)
+                        <a href="<?= base_url('dotask/add') ?>" class="d-inline btn btn-sm btn-primary float-end e-2"><i class="feather-12" data-feather="plus-circle"></i>Add</a>
+                    </h2>
+
+                    <div class="card mt-3">
                         <div class="card-body">
                             <ul class="list-group ">
                                 <?php foreach ($dotask as $dt) : ?>
                                     <li class="list-group-item list-group-item-success">
                                         <input type="checkbox" name="task" id="task" value="<?= $dt['nama_task'] ?>" />
                                         <label class="strikethrough"><?= $dt['nama_task'] ?>
-                                            <a href="<?= base_url('dotask/edit/') . $dt['id'] ?>" class="btn btn-warning ml-4"><i data-feather="edit">Edit</i></a>
-                                            <a href="" class="btn btn-danger float-right"><i data-feather="trash-2">Delete</i></a>
+                                            <a href="<?= base_url('dotask/edit/') . $dt['id'] ?>" class="btn btn-sm btn-warning ml-4"><i data-feather="edit">Edit</i></a>
+                                            <a href="" class="btn btn-sm btn-danger float-right"><i data-feather="trash-2">Delete</i></a>
 
                                         </label>
 
@@ -80,9 +91,11 @@
             <div class="col-12 col-xl-3">
                 <!-- Sales & Stocks Charts Start -->
                 <div class="mb-5">
-                    <h2 class="small-title">Do Today</h2>
+                    <h2 class="small-title">Do Today
+                        <a href="#" class="d-inline btn btn-sm btn-primary float-end e-2"><i class="feather-12" data-feather="plus-circle"></i>Add</a>
+                    </h2>
 
-                    <div class="card">
+                    <div class="card mt-3">
                         <div class="card-body">
                             <ul class="list-group ">
                                 <li class="list-group-item list-group-item-success">
@@ -119,8 +132,10 @@
             <div class="col-12 col-xl-3">
                 <!-- Sales & Stocks Charts Start -->
                 <div class="mb-5">
-                    <h2 class="small-title"> In Progress</h2>
-                    <div class="card">
+                    <h2 class="small-title"> In Progress
+                        <a href="#" class="d-inline btn btn-sm btn-primary float-end e-2"><i class="feather-12" data-feather="plus-circle"></i>Add</a>
+                    </h2>
+                    <div class="card mt-3">
                         <div class="card-body">
                             <ul class="list-group ">
                                 <li class="list-group-item list-group-item-success">
@@ -157,8 +172,10 @@
             <div class="col-12 col-xl-3">
                 <!-- Sales & Stocks Charts Start -->
                 <div class="mb-5">
-                    <h2 class="small-title">Done</h2>
-                    <div class="card">
+                    <h2 class="small-title">Done
+                        <a href="#" class="d-inline btn btn-sm btn-primary float-end e-2"><i class="feather-12" data-feather="plus-circle"></i>Add</a>
+                    </h2>
+                    <div class="card mt-3">
                         <div class="card-body">
                             <ul class="list-group ">
                                 <li class="list-group-item list-group-item-success">
