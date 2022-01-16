@@ -18,15 +18,48 @@ class Dotask_model extends CI_Model
 
     public function add()
     {
+        $start_date = $this->input->post('start_date');
+        $newstartdate = date("Y-m-d", strtotime($start_date));
+        $due_date = $this->input->post('due_date');
+        $newduedate = date("Y-m-d", strtotime($due_date));
         $data = [
             'nama_task' => htmlspecialchars($this->input->post('name_task')),
             'content' => htmlspecialchars($this->input->post('content')),
-            'start_date' => htmlspecialchars($this->input->post('start_date')),
+            'start_date' => $newstartdate,
             'start_time' => htmlspecialchars($this->input->post('start_time')),
-            'due_date' => htmlspecialchars($this->input->post('due_date')),
+            'due_date' => $newduedate,
             'due_time' => htmlspecialchars($this->input->post('due_time')),
             'status' => htmlspecialchars($this->input->post('status')),
         ];
         $this->db->insert('todo', $data);
+        // var_dump($this->db->last_query());
+        // die;
+    }
+
+    public function edit($id)
+    {
+        $start_date = $this->input->post('start_date');
+        $newstartdate = date("Y-m-d", strtotime($start_date));
+        $due_date = $this->input->post('due_date');
+        $newduedate = date("Y-m-d", strtotime($due_date));
+        $data = [
+            'nama_task' => htmlspecialchars($this->input->post('name_task')),
+            'content' => htmlspecialchars($this->input->post('content')),
+            'start_date' => $newstartdate,
+            'start_time' => htmlspecialchars($this->input->post('start_time')),
+            'due_date' => $newduedate,
+            'due_time' => htmlspecialchars($this->input->post('due_time')),
+            'status' => htmlspecialchars($this->input->post('status')),
+        ];
+        $this->db->where('id', $id);
+        $this->db->update('todo', $data);
+    }
+
+    public function delete($id)
+    {
+        $this->db->where('id', $id);
+        $this->db->delete('todo');
+        // var_dump($this->db->last_query());
+        // die;
     }
 }

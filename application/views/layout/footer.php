@@ -347,6 +347,12 @@
 <script src="<?= base_url('assets/') ?>js/common.js"></script>
 <script src="<?= base_url('assets/') ?>js/scripts.js"></script>
 <!-- Page Specific Scripts End -->
+
+<script>
+    // Replace the <textarea id="editor1"> with a CKEditor 4
+    // instance, using default configuration.
+    CKEDITOR.replace('content');
+</script>
 </body>
 
 </html>

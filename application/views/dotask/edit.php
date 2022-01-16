@@ -61,24 +61,53 @@
                             <form action="" method="post">
                                 <label for="" class="form-label">Name Task</label>
                                 <div class="input-group mb-3"><span class="input-group-text" id="name_task"><i data-feather="user">Edit</i></span>
-                                    <input type="text" name="name_task" class="form-control" placeholder="Name" value="<?= $dotaskid['nama_task'] ?>" aria-label="Nametask" aria-describedby="name_task" />
+                                    <input type="text" name="name_task" class="form-control" placeholder="Name Task" aria-label="Nametask" value="<?= $dotaskid['nama_task'] ?>" aria-describedby="name_task" />
                                 </div>
+                                <small class="text-danger"><?= form_error('name_task') ?></small>
+
                                 <label for="" class="form-label">Sub Task</label>
-                                <div class="html-editor sh-19" name="content" id="quillEditor"></div>
+                                <textarea name="content" id="content" rows="10" cols="80"><?= $dotaskid['content'] ?></textarea>
+                                <small class="text-danger"><?= form_error('content') ?></small>
 
-                                <ul class="list-group ">
 
-                                    <li class="list-group-item list-group-item-success">
-                                        <input type="checkbox" name="task" id="task" value="<?= $dotaskid['nama_task'] ?>" />
-                                        <label class="strikethrough"><?= $dotaskid['nama_task'] ?>
-                                            <a href="<?= base_url('dotask/edit/') . $dotaskid['id'] ?>" class="btn btn-warning ml-4"><i data-feather="edit">Edit</i></a>
-                                            <a href="" class="btn btn-danger float-right"><i data-feather="trash-2">Delete</i></a>
-
+                                <label for="" class="form-label">Date</label>
+                                <div class="row g-3 input-daterange" id="datePickerRange">
+                                    <div class="col-md-6">
+                                        <label class="mb-3 top-label">
+                                            <input type="text" class="form-control" name="start_date" value="<?= $dotaskid['start_date'] ?>" />
+                                            <span>START DATE</span>
                                         </label>
+                                        <small class="text-danger"><?= form_error('start_date') ?></small>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="mb-3 top-label">
+                                            <input type="text" class="form-control" name="due_date" value="<?= $dotaskid['due_date'] ?>" />
+                                            <span>DUE DATE</span>
+                                        </label>
+                                        <small class="text-danger"><?= form_error('due_date') ?></small>
+                                    </div>
+                                </div>
 
-                                    </li>
-
-                                </ul>
+                                <label for="" class="form-label">Time</label>
+                                <div class="row g-3 input-daterange" id="datePickerRange">
+                                    <div class="col-md-6">
+                                        <label class="mb-3 top-label">
+                                            <input type="time" class="form-control" name="start_time" value="<?= $dotaskid['start_time'] ?>" />
+                                            <span>START TIME</span>
+                                        </label>
+                                        <small class="text-danger"><?= form_error('start_time') ?></small>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="mb-3 top-label">
+                                            <input type="time" class="form-control" name="due_time" value="<?= $dotaskid['due_time'] ?>" />
+                                            <span>END TIME</span>
+                                        </label>
+                                        <small class="text-danger"><?= form_error('due_time') ?></small>
+                                    </div>
+                                </div>
+                                <input type="hidden" class="form-control" name="status" value="1" />
+                                <button type="submit" class="btn btn-primary float-start">SAVE</button>
+                                <a href="<?= base_url('dotask') ?>" class="btn btn-success ms-2">BACK</a>
                             </form>
 
                         </div>

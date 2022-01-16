@@ -49,6 +49,7 @@
     <link rel="stylesheet" href="<?= base_url('assets/') ?>css/vendor/quill.bubble.css" />
     <link rel="stylesheet" href="<?= base_url('assets/') ?>css/vendor/quill.snow.css" />
     <link rel="stylesheet" href="<?= base_url('assets/') ?>css/vendor/bootstrap-datepicker3.standalone.min.css" />
+    <script src="<?= base_url('assets/js/plugins/ckeditor/') ?>/ckeditor.js"></script>
     <!-- Vendor Styles End -->
     <!-- Template Base Styles Start -->
     <link rel="stylesheet" href="<?= base_url('assets/') ?>css/styles.css" />

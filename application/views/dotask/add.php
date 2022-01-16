@@ -56,9 +56,9 @@
                                 <small class="text-danger"><?= form_error('name_task') ?></small>
 
                                 <label for="" class="form-label">Sub Task</label>
-                                <div class="html-editor sh-19 mb-3" id="quillEditor">
-                                    <input type="text" name="content">
-                                </div>
+                                <textarea name="content" id="content" rows="10" cols="80"></textarea>
+                                <small class="text-danger"><?= form_error('content') ?></small>
+
 
                                 <label for="" class="form-label">Date</label>
                                 <div class="row g-3 input-daterange" id="datePickerRange">
@@ -97,6 +97,7 @@
                                 </div>
                                 <input type="hidden" class="form-control" name="status" value="1" />
                                 <button type="submit" class="btn btn-primary float-start">SAVE</button>
+                                <a href="<?= base_url('dotask') ?>" class="btn btn-success ms-2">BACK</a>
                             </form>
 
                         </div>
