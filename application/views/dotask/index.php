@@ -78,6 +78,13 @@
                                         <label class="strikethrough"><?= $dt['nama_task'] ?>
                                             <a href="<?= base_url('dotask/edit/') . $dt['id'] ?>" class="btn btn-sm btn-warning ml-4"><i data-feather="edit">Edit</i></a>
                                             <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deletemod<?= $dt['id']; ?>"><i data-feather=" trash-2">Delete</i></button>
+                                            <?php if ($dt['mark_done'] == NULL) : ?>
+                                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#markdone<?= $dt['id']; ?>"><i data-feather=" trash-2">Mark Done</i></button>
+
+                                            <?php else : ?>
+                                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#undone<?= $dt['id']; ?>"><i data-feather=" trash-2">Mark Undone</i></button>
+
+                                            <?php endif ?>
                                             <!-- <a href="" class="btn btn-sm btn-danger float-right" data-toggle="modal" data-target="#myModal<?= $dt['id'] ?>"><i data-feather=" trash-2">Delete</i></a> -->
 
                                         </label>
@@ -100,6 +107,40 @@
                                             </div>
                                         </div>
                                     </div>
+
+                                    <div class="modal fade" id="undone<?= $dt['id']; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelDefault" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalLabelDefault">Undone <?= $dt['nama_task'] ?></h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">Are you sure undone this task <strong><?= $dt['nama_task'] ?></strong> ? </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                    <a href="<?= base_url('dotask/markundone/') . $dt['id']; ?>" class="btn btn-primary">Save changes</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="modal fade" id="markdone<?= $dt['id']; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelDefault" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalLabelDefault">Mark Done <?= $dt['nama_task'] ?></h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">Are you sure done this task <strong><?= $dt['nama_task'] ?></strong> ? </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                    <a href="<?= base_url('dotask/markdone/') . $dt['id']; ?>" class="btn btn-primary">Save changes</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 <?php endforeach ?>
 
                             </ul>
@@ -113,117 +154,221 @@
                 <!-- Sales & Stocks Charts Start -->
                 <div class="mb-5">
                     <h2 class="small-title">Do Today
-                        <a href="#" class="d-inline btn btn-sm btn-primary float-end e-2"><i class="feather-12" data-feather="plus-circle"></i>Add</a>
+                        <a href="<?= base_url('dotask/adddotoday') ?>" class="d-inline btn btn-sm btn-primary float-end e-2"><i class="feather-12" data-feather="plus-circle"></i>Add</a>
                     </h2>
 
                     <div class="card mt-3">
                         <div class="card-body">
                             <ul class="list-group ">
-                                <li class="list-group-item list-group-item-success">
-                                    <input type="checkbox" name="task" id="task" value="1" />
-                                    <label class="strikethrough">Task</label>
-                                </li>
-                                <li class="list-group-item list-group-item-success">
-                                    <input type="checkbox" name="task" id="task" value="1" />
-                                    <label class="strikethrough">Task</label>
-                                </li>
-                                <li class="list-group-item list-group-item-success">
-                                    <input type="checkbox" name="task" id="task" value="1" />
-                                    <label class="strikethrough">Task</label>
-                                </li>
-                                <li class="list-group-item list-group-item-success">
-                                    <input type="checkbox" name="task" id="task" value="1" />
-                                    <label class="strikethrough">Task</label>
-                                </li>
-                                <li class="list-group-item list-group-item-success">
-                                    <input type="checkbox" name="task" id="task" value="1" />
-                                    <label class="strikethrough">Task</label>
-                                </li>
-                                <li class="list-group-item list-group-item-success">
-                                    <input type="checkbox" name="task" id="task" value="1" />
-                                    <label class="strikethrough">Task</label>
-                                </li>
+                                <?php foreach ($dotoday as $today) : ?>
+                                    <li class="list-group-item list-group-item-success">
+                                        <input type="checkbox" name="task" id="task" value="<?= $today['nama_task'] ?>" />
+                                        <label class="strikethrough"><?= $today['nama_task'] ?>
+                                            <a href="<?= base_url('dotask/edit/') . $today['id'] ?>" class="btn btn-sm btn-warning ml-4"><i data-feather="edit">Edit</i></a>
+                                            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deletemod<?= $today['id']; ?>"><i data-feather=" trash-2">Delete</i></button>
+                                            <?php if ($today['mark_done'] == NULL) : ?>
+                                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#todaydone<?= $dt['id']; ?>"><i data-feather=" trash-2">Mark Done</i></button>
+                                            <?php else : ?>
+                                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#todayundone<?= $dt['id']; ?>"><i data-feather=" trash-2">Mark Undone</i></button>
+                                            <?php endif ?>
+                                            <!-- <a href="" class="btn btn-sm btn-danger float-right" data-toggle="modal" data-target="#myModal<?= $today['id'] ?>"><i data-feather=" trash-2">Delete</i></a> -->
+
+                                        </label>
+
+                                    </li>
+                                    <div class="modal fade" id="deletemod<?= $today['id']; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelDefault" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalLabelDefault">Delete Data <?= $today['nama_task'] ?></h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                                                        <!-- <i data-cs-icon="close"></i> -->
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">Are you sure to delete data <strong><?= $today['nama_task'] ?></strong></div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                    <a href="<?= base_url('dotask/delete/') . $today['id']; ?>" class="btn btn-primary">Save changes</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="modal fade" id="undone<?= $today['id']; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelDefault" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalLabelDefault">Undone <?= $today['nama_task'] ?></h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">Are you sure undone this task <strong><?= $today['nama_task'] ?></strong> ? </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                    <a href="<?= base_url('dotask/markundone/') . $today['id']; ?>" class="btn btn-primary">Save changes</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="modal fade" id="markdone<?= $today['id']; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelDefault" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalLabelDefault">Mark Done <?= $today['nama_task'] ?></h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">Are you sure done this task <strong><?= $today['nama_task'] ?></strong> ? </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                    <a href="<?= base_url('dotask/markdone/') . $today['id']; ?>" class="btn btn-primary">Save changes</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                <?php endforeach ?>
+
                             </ul>
 
                         </div>
                     </div>
                 </div>
-                <!-- Sales & Stocks Charts End -->
             </div>
             <div class="col-12 col-xl-3">
                 <!-- Sales & Stocks Charts Start -->
                 <div class="mb-5">
-                    <h2 class="small-title"> In Progress
-                        <a href="#" class="d-inline btn btn-sm btn-primary float-end e-2"><i class="feather-12" data-feather="plus-circle"></i>Add</a>
+                    <h2 class="small-title">In progress
+                        <a href="<?= base_url('dotask/addinprogress') ?>" class="d-inline btn btn-sm btn-primary float-end e-2"><i class="feather-12" data-feather="plus-circle"></i>Add</a>
                     </h2>
+
                     <div class="card mt-3">
                         <div class="card-body">
                             <ul class="list-group ">
-                                <li class="list-group-item list-group-item-success">
-                                    <input type="checkbox" name="task" id="task" value="1" />
-                                    <label class="strikethrough">Task</label>
-                                </li>
-                                <li class="list-group-item list-group-item-success">
-                                    <input type="checkbox" name="task" id="task" value="1" />
-                                    <label class="strikethrough">Task</label>
-                                </li>
-                                <li class="list-group-item list-group-item-success">
-                                    <input type="checkbox" name="task" id="task" value="1" />
-                                    <label class="strikethrough">Task</label>
-                                </li>
-                                <li class="list-group-item list-group-item-success">
-                                    <input type="checkbox" name="task" id="task" value="1" />
-                                    <label class="strikethrough">Task</label>
-                                </li>
-                                <li class="list-group-item list-group-item-success">
-                                    <input type="checkbox" name="task" id="task" value="1" />
-                                    <label class="strikethrough">Task</label>
-                                </li>
-                                <li class="list-group-item list-group-item-success">
-                                    <input type="checkbox" name="task" id="task" value="1" />
-                                    <label class="strikethrough">Task</label>
-                                </li>
+                                <?php foreach ($progress as $prog) : ?>
+                                    <li class="list-group-item list-group-item-success">
+                                        <input type="checkbox" name="task" id="task" value="<?= $prog['nama_task'] ?>" />
+                                        <label class="strikethrough"><?= $prog['nama_task'] ?>
+                                            <a href="<?= base_url('dotask/edit/') . $prog['id'] ?>" class="btn btn-sm btn-warning ml-4"><i data-feather="edit">Edit</i></a>
+                                            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deletemod<?= $prog['id']; ?>"><i data-feather=" trash-2">Delete</i></button>
+                                            <?php if ($prog['mark_done'] == NULL) : ?>
+                                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#markdone<?= $dt['id']; ?>"><i data-feather=" trash-2">Mark Done</i></button>
+
+                                            <?php else : ?>
+                                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#undone<?= $dt['id']; ?>"><i data-feather=" trash-2">Mark Undone</i></button>
+
+                                            <?php endif ?>
+                                            <!-- <a href="" class="btn btn-sm btn-danger float-right" data-toggle="modal" data-target="#myModal<?= $prog['id'] ?>"><i data-feather=" trash-2">Delete</i></a> -->
+
+                                        </label>
+
+                                    </li>
+                                    <div class="modal fade" id="deletemod<?= $prog['id']; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelDefault" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalLabelDefault">Delete Data <?= $prog['nama_task'] ?></h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                                                        <!-- <i data-cs-icon="close"></i> -->
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">Are you sure to delete data <strong><?= $prog['nama_task'] ?></strong></div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                    <a href="<?= base_url('dotask/delete/') . $prog['id']; ?>" class="btn btn-primary">Save changes</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal fade" id="undone<?= $prog['id']; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelDefault" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalLabelDefault">Undone <?= $prog['nama_task'] ?></h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">Are you sure undone this task <strong><?= $prog['nama_task'] ?></strong> ? </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                    <a href="<?= base_url('dotask/markundone/') . $prog['id']; ?>" class="btn btn-primary">Save changes</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="modal fade" id="markdone<?= $prog['id']; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelDefault" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalLabelDefault">Mark Done <?= $prog['nama_task'] ?></h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">Are you sure done this task <strong><?= $prog['nama_task'] ?></strong> ? </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                    <a href="<?= base_url('dotask/markdone/') . $prog['id']; ?>" class="btn btn-primary">Save changes</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                <?php endforeach ?>
+
                             </ul>
 
                         </div>
                     </div>
                 </div>
-                <!-- Sales & Stocks Charts End -->
             </div>
             <div class="col-12 col-xl-3">
                 <!-- Sales & Stocks Charts Start -->
                 <div class="mb-5">
                     <h2 class="small-title">Done
-                        <a href="#" class="d-inline btn btn-sm btn-primary float-end e-2"><i class="feather-12" data-feather="plus-circle"></i>Add</a>
+                        <a href="<?= base_url('dotask/addone') ?>" class="d-inline btn btn-sm btn-primary float-end e-2"><i class="feather-12" data-feather="plus-circle"></i>Add</a>
                     </h2>
                     <div class="card mt-3">
                         <div class="card-body">
                             <ul class="list-group ">
-                                <li class="list-group-item list-group-item-success">
-                                    <input type="checkbox" name="task" id="task" value="1" />
-                                    <label class="strikethrough">Task</label>
-                                </li>
-                                <li class="list-group-item list-group-item-success">
-                                    <input type="checkbox" name="task" id="task" value="1" />
-                                    <label class="strikethrough">Task</label>
-                                </li>
-                                <li class="list-group-item list-group-item-success">
-                                    <input type="checkbox" name="task" id="task" value="1" />
-                                    <label class="strikethrough">Task</label>
-                                </li>
-                                <li class="list-group-item list-group-item-success">
-                                    <input type="checkbox" name="task" id="task" value="1" />
-                                    <label class="strikethrough">Task</label>
-                                </li>
-                                <li class="list-group-item list-group-item-success">
-                                    <input type="checkbox" name="task" id="task" value="1" />
-                                    <label class="strikethrough">Task</label>
-                                </li>
-                                <li class="list-group-item list-group-item-success">
-                                    <input type="checkbox" name="task" id="task" value="1" />
-                                    <label class="strikethrough">Task</label>
-                                </li>
+                                <?php foreach ($done as $d) : ?>
+                                    <li class="list-group-item list-group-item-success">
+                                        <input type="checkbox" name="task" id="task" value="<?= $d['nama_task'] ?>" />
+                                        <label class="strikethrough"><?= $d['nama_task'] ?>
+                                            <a href="<?= base_url('dotask/edit/') . $d['id'] ?>" class="btn btn-sm btn-warning ml-4"><i data-feather="edit">Edit</i></a>
+                                            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deletemod<?= $d['id']; ?>"><i data-feather=" trash-2">Delete</i></button>
+
+                                            <?php if ($d['mark_done'] == NULL) : ?>
+                                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#markdone<?= $dt['id']; ?>"><i data-feather=" trash-2">Mark Done</i></button>
+
+                                            <?php else : ?>
+                                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#undone<?= $dt['id']; ?>"><i data-feather=" trash-2">Mark Undone</i></button>
+
+                                            <?php endif ?>
+                                            <!-- <a href="" class="btn btn-sm btn-danger float-right" data-toggle="modal" data-target="#myModal<?= $d['id'] ?>"><i data-feather=" trash-2">Delete</i></a> -->
+
+                                        </label>
+
+                                    </li>
+                                    <div class="modal fade" id="deletemod<?= $d['id']; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelDefault" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalLabelDefault">Delete Data <?= $d['nama_task'] ?></h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">Are you sure to delete data <strong><?= $d['nama_task'] ?></strong></div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                    <a href="<?= base_url('dotask/delete/') . $d['id']; ?>" class="btn btn-primary">Save changes</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                <?php endforeach ?>
+
                             </ul>
+
                         </div>
                     </div>
                 </div>
