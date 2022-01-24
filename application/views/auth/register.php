@@ -56,12 +56,12 @@
                         <div>
                             <form id="loginForm" method="POST" class="tooltip-end-bottom" novalidate>
                                 <div class="mb-3 filled form-group tooltip-end-top">
-                                    <i data-cs-icon="users"></i>
+                                    <i data-cs-icon="user"></i>
                                     <input class="form-control" placeholder="Username" name="username" />
                                     <small class="text-danger"><?= form_error('username') ?></small>
                                 </div>
                                 <div class="mb-3 filled form-group tooltip-end-top">
-                                    <i data-cs-icon="users"></i>
+                                    <i data-cs-icon="tablet"></i>
                                     <input class="form-control" placeholder="Nama" name="nama" />
                                     <small class="text-danger"><?= form_error('nama') ?></small>
                                 </div>
