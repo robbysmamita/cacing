@@ -5,9 +5,11 @@ class Dotask_model extends CI_Model
     public function getTodo()
     {
         // return $this->db->get('todo')->result_array();
-        return $this->db->get_where('todo', ['status' => 1])->result_array();
+        $usersid =  $this->session->userdata('username_id');
+        return $this->db->get_where('todo', ['users_id' => $usersid])->result_array();
+        // return $this->db->get_where('todo', ['users_id' => $this->session->userdata])->result_array();
     }
-    public function getTodoy()
+    public function getToday()
     {
         return $this->db->get_where('todo', ['status' => 2])->result_array();
     }

@@ -59,6 +59,7 @@
                     <div class="card">
                         <div class="card-body">
                             <form action="" method="post">
+                                <input type="hidden" name="users_id" class="form-control" placeholder="Name Task" aria-label="username_id" value="<?= $this->session->userdata('username_id') ?>" aria-describedby="username_id" />
                                 <label for="" class="form-label">Name Task</label>
                                 <div class="input-group mb-3"><span class="input-group-text" id="name_task"><i data-feather="user">Edit</i></span>
                                     <input type="text" name="name_task" class="form-control" placeholder="Name Task" aria-label="Nametask" value="<?= $dotaskid['nama_task'] ?>" aria-describedby="name_task" />

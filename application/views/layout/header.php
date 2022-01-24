@@ -46,9 +46,11 @@
     <link rel="stylesheet" href="<?= base_url('assets/') ?>css/vendor/select2-bootstrap4.min.css" />
     <link rel="stylesheet" href="<?= base_url('assets/') ?>css/vendor/plyr.css" />
     <link rel="stylesheet" href="<?= base_url('assets/') ?>css/font-awesome.css" />
+    <link rel="stylesheet" href="<?= base_url('assets/') ?>css/vendor/datatables.min.css" />
     <link rel="stylesheet" href="<?= base_url('assets/') ?>css/vendor/quill.bubble.css" />
     <link rel="stylesheet" href="<?= base_url('assets/') ?>css/vendor/quill.snow.css" />
     <link rel="stylesheet" href="<?= base_url('assets/') ?>css/vendor/bootstrap-datepicker3.standalone.min.css" />
+    <link rel="stylesheet" href="<?= base_url('assets/js/datatables/') ?>dataTables.bootstrap5.min.css">
     <script src="<?= base_url('assets/js/plugins/ckeditor/') ?>/ckeditor.js"></script>
     <!-- Vendor Styles End -->
     <!-- Template Base Styles Start -->

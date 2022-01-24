@@ -16,7 +16,7 @@
         <div class="user-container float-right">
             <a href="#" class="d-flex user position-relative" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <img class="profile" alt="profile" src="<?= base_url('assets/') ?>img/profile/profile-9.jpg" />
-                <div class="name">Lisa Jackson</div>
+                <div class="name"><?= $this->session->userdata('nama') ?></div>
             </a>
             <div class="dropdown-menu dropdown-menu-end user-menu wide">
                 <div class="row mb-3 ms-0 me-0">
@@ -101,7 +101,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="<?= base_url('auth/logout') ?>">
                                     <i data-cs-icon="logout" class="me-2" data-cs-size="17"></i>
                                     <span class="align-middle">Logout</span>
                                 </a>

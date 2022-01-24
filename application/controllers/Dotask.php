@@ -7,24 +7,35 @@ class Dotask extends CI_Controller
         parent::__construct();
         $this->load->library('form_validation');
         $this->load->model('Dotask_model');
+        if (!$this->session->userdata('email')) {
+            redirect('auth/index');
+        }
     }
 
     public function index()
     {
         $data['title'] = "CACING - Baca Catat Ingat";
+        $data['username_id'] = $this->session->userdata('username_id');
+        $data['userdatasess'] = $this->session->userdata();
         $data['dotask'] = $this->Dotask_model->getTodo();
-        $data['dotoday'] = $this->Dotask_model->getTodoy();
+        $data['dotoday'] = $this->Dotask_model->getToday();
         $data['progress'] = $this->Dotask_model->getProgress();
         $data['done'] = $this->Dotask_model->getDone();
         // $data['dotasid'] = $this->Dotask_model->getTodoById($id);
         $this->load->view('layout/header', $data);
         $this->load->view('layout/navbar', $data);
         $this->load->view('dotask/index', $data);
+        $this->load->view('layout/footname', $data);
         $this->load->view('layout/footer', $data);
     }
 
     public function add()
     {
+        $this->form_validation->set_rules(
+            'users_id',
+            'users_id',
+            'required'
+        );
         $this->form_validation->set_rules(
             'name_task',
             'Name task',
@@ -63,10 +74,13 @@ class Dotask extends CI_Controller
         if ($this->form_validation->run() == FALSE) {
 
             $data['title'] = "CACING - Baca Catat Ingat";
+            $data['username_id'] = $this->session->userdata('username_id');
+            $data['userdatasess'] = $this->session->userdata();
             $data['dotask'] = $this->Dotask_model->getTodo();
             $this->load->view('layout/header', $data);
             $this->load->view('layout/navbar', $data);
             $this->load->view('dotask/add', $data);
+            $this->load->view('layout/footname', $data);
             $this->load->view('layout/footer', $data);
         } else {
             $this->Dotask_model->add();
@@ -114,10 +128,13 @@ class Dotask extends CI_Controller
         if ($this->form_validation->run() == FALSE) {
 
             $data['title'] = "CACING - Baca Catat Ingat";
+            $data['username_id'] = $this->session->userdata('username_id');
+            $data['userdatasess'] = $this->session->userdata();
             $data['dotask'] = $this->Dotask_model->getTodo();
             $this->load->view('layout/header', $data);
             $this->load->view('layout/navbar', $data);
             $this->load->view('dotask/adddotoday', $data);
+            $this->load->view('layout/footname', $data);
             $this->load->view('layout/footer', $data);
         } else {
             $this->Dotask_model->add();
@@ -169,6 +186,7 @@ class Dotask extends CI_Controller
             $this->load->view('layout/header', $data);
             $this->load->view('layout/navbar', $data);
             $this->load->view('dotask/addinprogress', $data);
+            $this->load->view('layout/footname', $data);
             $this->load->view('layout/footer', $data);
         } else {
             $this->Dotask_model->add();
@@ -217,11 +235,14 @@ class Dotask extends CI_Controller
         if ($this->form_validation->run() == FALSE) {
 
             $data['title'] = "CACING - Baca Catat Ingat";
+            $data['username_id'] = $this->session->userdata('username_id');
+            $data['userdatasess'] = $this->session->userdata();
             $data['dotask'] = $this->Dotask_model->getTodo();
             $data['dotoday'] = $this->Dotask_model->getTodoy();
             $this->load->view('layout/header', $data);
             $this->load->view('layout/navbar', $data);
             $this->load->view('dotask/adddone', $data);
+            $this->load->view('layout/footname', $data);
             $this->load->view('layout/footer', $data);
         } else {
             $this->Dotask_model->adddotask();
@@ -232,6 +253,11 @@ class Dotask extends CI_Controller
 
     public function edit($id)
     {
+        $this->form_validation->set_rules(
+            'users_id',
+            'users_id',
+            'required'
+        );
         $this->form_validation->set_rules(
             'name_task',
             'Name task',
@@ -269,11 +295,14 @@ class Dotask extends CI_Controller
         );
         if ($this->form_validation->run() == FALSE) {
             $data['title'] = "CACING - Baca Catat Ingat";
+            $data['username_id'] = $this->session->userdata('username_id');
+            $data['userdatasess'] = $this->session->userdata();
             // $data['dotask'] = $this->Dotask_model->getTodo();
             $data['dotaskid'] = $this->Dotask_model->getTodoById($id);
             $this->load->view('layout/header', $data);
             $this->load->view('layout/navbar', $data);
             $this->load->view('dotask/edit', $data);
+            $this->load->view('layout/footname', $data);
             $this->load->view('layout/footer', $data);
         } else {
             $this->Dotask_model->edit($id);
