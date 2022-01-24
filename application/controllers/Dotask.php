@@ -31,11 +31,7 @@ class Dotask extends CI_Controller
 
     public function add()
     {
-        $this->form_validation->set_rules(
-            'users_id',
-            'users_id',
-            'required'
-        );
+
         $this->form_validation->set_rules(
             'name_task',
             'Name task',

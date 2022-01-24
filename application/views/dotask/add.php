@@ -28,7 +28,7 @@
                     <div class="card">
                         <div class="card-body">
                             <form action="" method="post">
-                                <input type="hidden" name="users_id" class="form-control" placeholder="users_id" aria-label="users_id" aria-describedby="users_id" />
+                                <input type="hidden" name="users_id" class="form-control" aria-label="users_id" value="<?= $username_id ?>" aria-describedby="users_id" />
                                 <label for="" class="form-label">Name Task</label>
                                 <div class="input-group mb-3"><span class="input-group-text" id="name_task"><i data-feather="user">Edit</i></span>
                                     <input type="text" name="name_task" class="form-control" placeholder="Name Task" aria-label="Nametask" aria-describedby="name_task" />
@@ -40,18 +40,18 @@
                                 <small class="text-danger"><?= form_error('content') ?></small>
 
 
-                                <label for="" class="form-label">Date</label>
-                                <div class="row g-3 input-daterange" id="datePickerRange">
+                                <label for="" class="form-label ">Date</label>
+                                <div class="row g-3 ">
                                     <div class="col-md-6">
                                         <label class="mb-3 top-label">
-                                            <input type="text" class="form-control" name="start_date" />
+                                            <input type="text" class="form-control flatpickr" name="start_date" />
                                             <span>START DATE</span>
                                         </label>
                                         <small class="text-danger"><?= form_error('start_date') ?></small>
                                     </div>
                                     <div class="col-md-6">
                                         <label class="mb-3 top-label">
-                                            <input type="text" class="form-control" name="due_date" />
+                                            <input type="text" class="form-control flatpickr" name="due_date" />
                                             <span>END DATE</span>
                                         </label>
                                         <small class="text-danger"><?= form_error('due_date') ?></small>
@@ -62,14 +62,14 @@
                                 <div class="row g-3 input-daterange" id="datePickerRange">
                                     <div class="col-md-6">
                                         <label class="mb-3 top-label">
-                                            <input type="time" class="form-control" name="start_time" />
+                                            <input type="text" class="form-control flatpickrtime" name="start_time" />
                                             <span>START TIME</span>
                                         </label>
                                         <small class="text-danger"><?= form_error('start_time') ?></small>
                                     </div>
                                     <div class="col-md-6">
                                         <label class="mb-3 top-label">
-                                            <input type="time" class="form-control" name="due_time" />
+                                            <input type="text" class="form-control flatpickrtime" name="due_time" />
                                             <span>END TIME</span>
                                         </label>
                                         <small class="text-danger"><?= form_error('due_time') ?></small>

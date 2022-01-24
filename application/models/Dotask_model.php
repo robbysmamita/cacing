@@ -37,7 +37,9 @@ class Dotask_model extends CI_Model
         $newstartdate = date("Y-m-d", strtotime($start_date));
         $due_date = $this->input->post('due_date');
         $newduedate = date("Y-m-d", strtotime($due_date));
+
         $data = [
+            'users_id' => htmlspecialchars($this->input->post('users_id')),
             'nama_task' => htmlspecialchars($this->input->post('name_task')),
             'content' => htmlspecialchars($this->input->post('content')),
             'start_date' => $newstartdate,

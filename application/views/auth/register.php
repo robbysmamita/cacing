@@ -89,6 +89,7 @@
                                             I have read and accept the
                                             <a href="#" target="_blank">terms and conditions.</a>
                                         </label>
+                                        <small class="text-danger"><?= form_error('terms') ?></small>
                                     </div>
                                 </div>
                                 <button type="submit" class="btn btn-lg btn-primary">Login</button>

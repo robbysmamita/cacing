@@ -2,6 +2,7 @@
 <script src="<?= base_url('assets/') ?>js/vendor/jquery-3.5.1.min.js"></script>
 <script src="<?= base_url('assets/js/datatables/') ?>jquery.dataTables.min.js"></script>
 <script src="<?= base_url('assets/js/datatables/') ?>dataTables.bootstrap5.min.js"></script>
+<script src="<?= base_url('assets/js/flatpickr/') ?>flatpickr.js"></script>
 <script src="<?= base_url('assets/') ?>js/vendor/datatables.min.js"></script>
 <script src="<?= base_url('assets/') ?>js/vendor/bootstrap.bundle.min.js"></script>
 <script src="<?= base_url('assets/') ?>js/vendor/OverlayScrollbars.min.js"></script>
@@ -61,6 +62,17 @@
 <script>
     $(document).ready(function() {
         $('#datatables').DataTable();
+        $(".flatpickr").flatpickr();
+    });
+</script>
+<script>
+    $(document).ready(function() {
+        $('.flatpickrtime').flatpickr({
+            enableTime: true,
+            noCalendar: true,
+            dateFormat: "H:i",
+            time_24hr: true
+        });
     });
 </script>
 </body>

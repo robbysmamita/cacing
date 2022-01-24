@@ -41,6 +41,13 @@
 
                     </div>
                     <!-- Controls End -->
+                    <?php if ($this->session->flashdata('dotask')) : ?>
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                            <strong>Congratulation!</strong> Data Has Been <strong><?= $this->session->flashdata('dotask') ?></strong>
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+
+                    <?php endif ?>
 
                     <!-- Table Start -->
                     <div class="row">

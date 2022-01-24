@@ -75,14 +75,14 @@
                                 <div class="row g-3 input-daterange" id="datePickerRange">
                                     <div class="col-md-6">
                                         <label class="mb-3 top-label">
-                                            <input type="text" class="form-control" name="start_date" value="<?= $dotaskid['start_date'] ?>" />
+                                            <input type="text" class="form-control flatpickr" name="start_date" value="<?= $dotaskid['start_date'] ?>" />
                                             <span>START DATE</span>
                                         </label>
                                         <small class="text-danger"><?= form_error('start_date') ?></small>
                                     </div>
                                     <div class="col-md-6">
                                         <label class="mb-3 top-label">
-                                            <input type="text" class="form-control" name="due_date" value="<?= $dotaskid['due_date'] ?>" />
+                                            <input type="text" class="form-control flatpickr" name="due_date" value="<?= $dotaskid['due_date'] ?>" />
                                             <span>DUE DATE</span>
                                         </label>
                                         <small class="text-danger"><?= form_error('due_date') ?></small>
@@ -93,14 +93,14 @@
                                 <div class="row g-3 input-daterange" id="datePickerRange">
                                     <div class="col-md-6">
                                         <label class="mb-3 top-label">
-                                            <input type="time" class="form-control" name="start_time" value="<?= $dotaskid['start_time'] ?>" />
+                                            <input type="time" class="form-control flatpickrtime" name="start_time" value="<?= $dotaskid['start_time'] ?>" />
                                             <span>START TIME</span>
                                         </label>
                                         <small class="text-danger"><?= form_error('start_time') ?></small>
                                     </div>
                                     <div class="col-md-6">
                                         <label class="mb-3 top-label">
-                                            <input type="time" class="form-control" name="due_time" value="<?= $dotaskid['due_time'] ?>" />
+                                            <input type="time" class="form-control flatpickrtime" name="due_time" value="<?= $dotaskid['due_time'] ?>" />
                                             <span>END TIME</span>
                                         </label>
                                         <small class="text-danger"><?= form_error('due_time') ?></small>

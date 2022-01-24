@@ -51,6 +51,7 @@
     <link rel="stylesheet" href="<?= base_url('assets/') ?>css/vendor/quill.snow.css" />
     <link rel="stylesheet" href="<?= base_url('assets/') ?>css/vendor/bootstrap-datepicker3.standalone.min.css" />
     <link rel="stylesheet" href="<?= base_url('assets/js/datatables/') ?>dataTables.bootstrap5.min.css">
+    <link rel="stylesheet" href="<?= base_url('assets/js/flatpickr/') ?>flatpickr.min.css">
     <script src="<?= base_url('assets/js/plugins/ckeditor/') ?>/ckeditor.js"></script>
     <!-- Vendor Styles End -->
     <!-- Template Base Styles Start -->
