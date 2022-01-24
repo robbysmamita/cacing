@@ -37,11 +37,14 @@
                     <div class="sw-lg-50 px-5">
                         <div class="sh-11">
                             <a href="#">
-                                <div class="logo-default"></div>
+                                <div class="logo-default">
+
+                                    <img src="<?= base_url('assets/img/cacing.PNG') ?>" class="img-fluid" alt="" srcset="">
+                                </div>
                             </a>
                         </div>
                         <?= $this->session->flashdata('users') ?>
-                        <div class="mb-5">
+                        <div class="mt-3 mb-5">
                             <h2 class="cta-1 mb-0 text-primary">Welcome,</h2>
                             <h2 class="cta-1 text-primary">let's get started!</h2>
                         </div>

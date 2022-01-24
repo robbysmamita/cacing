@@ -7,7 +7,9 @@
                 <!-- <img src="img/logo/logo-white.svg" alt="logo" /> -->
 
                 <!-- Or added via css to provide different ones for different color themes -->
-                <div class="img"></div>
+                <div class="img">
+                    <img src="<?= base_url('assets/img/cacing.PNG') ?>" height="75px" alt="" srcset="">
+                </div>
             </a>
         </div>
         <!-- Logo End -->
